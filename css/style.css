@@ -1,38 +1,89 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-brand {
-  font-weight: bold; 
-  color: #000; 
-  font-size: 1rem; 
-  white-space: nowrap;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000;
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 15px;
+    color: #000;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    color: #A55A42;
 }
 
 .header-bg {
   background-image: url('../images/content utama.png'); 
   background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  color: white; 
+  background-position: center;
 }
 
-.header-bg h1, 
-.header-bg p {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
+.container2 img{
+  max-height: 170px; 
+  margin-bottom: 20px;
 }
 
-.header-bg .btn {
-  font-weight: bold; 
-  border: 2px solid white; 
-  background-color: rgba(255, 255, 255, 0.2); 
+.search-bar {
+  max-width: 600px;
+  margin: auto;
+}
+
+.search-btn {
+  background-color: #A55A42;
   color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 5px;
 }
 
-.header-bg .btn:hover {
-  background-color: white; 
-  color: #000; 
+.search-btn:hover {
+  background-color: #8B452F;
+  cursor: pointer;
+}
+
+.search-icon {
+  margin-top: 5px;
+  width: 20px; 
+  height: 20px; 
+}
+
+.custom-btn {
+  background-color: #A55A42; 
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px; 
+  padding: 15px;
+}
+
+.custom-btn:hover {
+  background-color: #8B452F; 
+}
+
+.custom-icon {
+  width: 40px; 
+  height: 40px;
+  margin-bottom: 10px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  gap: 20px; 
 }
