@@ -132,3 +132,59 @@ body {
 .circle-btn:hover ~ .circle-text {
   color: #8b452f;
 }
+
+.services-wrapper {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.services-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.services-wrapper::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 4px;
+}
+
+.services-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#scroll-left,
+#scroll-right {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #scroll-left,
+  #scroll-right {
+    display: inline-block;
+  }
+}
+
+.left-button {
+  top: 50%;
+  left: -1.5rem;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.right-button {
+  top: 50%;
+  right: -1.5rem;
+  transform: translateY(-50%);
+  z-index: 10;
+}
