@@ -23,6 +23,7 @@
     <?php include 'main/informasi-publik.html'; ?>
     <?php include 'main/Pusat-Informasi-Terpadu.html'; ?>
     <?php include 'main/Keunggulan.html'; ?>
+    <?php include 'main/penghargaan.html'; ?>
 
   
     <?php include 'includes/footer.html'; ?>
