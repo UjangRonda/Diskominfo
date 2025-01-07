@@ -12,7 +12,43 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .services-wrapper {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 1rem;
+      }
+      .services-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+      .scroll-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 50%;
+      }
+      #scroll-left {
+        left: 1rem;
+      }
+      #scroll-right {
+        right: 1rem;
+      }
+      .card {
+        min-width: 300px;
+        transition: transform 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+      }
+    </style>
   </head>
   <body>
     <section id="services" class="py-5 bg-light">
@@ -22,12 +58,20 @@
           Berikut adalah layanan yang kami tawarkan untuk memastikan akses
           informasi publik yang transparan dan akuntabel.
         </p>
+
         <div class="position-relative">
-        
+          <!-- Tombol Scroll -->
+          <button id="scroll-left" class="scroll-button">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button id="scroll-right" class="scroll-button">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+
           <!-- Kontainer Layanan -->
-          <div class="services-wrapper d-flex overflow-auto">
+          <div class="services-wrapper">
             <!-- Prosedur Pelayanan Informasi Publik -->
-            <div class="card shadow-lg border-0 mx-3" style="min-width: 300px">
+            <div class="card shadow-lg border-0">
               <div class="card-body text-center">
                 <i class="bi bi-journal-text text-primary display-4 mb-3"></i>
                 <h5 class="card-title">Prosedur Pelayanan Informasi Publik</h5>
@@ -39,7 +83,7 @@
             </div>
 
             <!-- Prosedur Penanganan Sengketa Informasi -->
-            <div class="card shadow-lg border-0 mx-3" style="min-width: 300px">
+            <div class="card shadow-lg border-0">
               <div class="card-body text-center">
                 <i class="bi bi-shield-check text-danger display-4 mb-3"></i>
                 <h5 class="card-title">
@@ -53,7 +97,7 @@
             </div>
 
             <!-- SOP PPID -->
-            <div class="card shadow-lg border-0 mx-3" style="min-width: 300px">
+            <div class="card shadow-lg border-0">
               <div class="card-body text-center">
                 <i class="bi bi-book text-info display-4 mb-3"></i>
                 <h5 class="card-title">SOP PPID</h5>
@@ -65,7 +109,7 @@
             </div>
 
             <!-- Kanal Layanan Informasi -->
-            <div class="card shadow-lg border-0 mx-3" style="min-width: 300px">
+            <div class="card shadow-lg border-0">
               <div class="card-body text-center">
                 <i class="bi bi-telephone text-primary display-4 mb-3"></i>
                 <h5 class="card-title">Kanal Layanan Informasi</h5>
@@ -77,7 +121,7 @@
             </div>
 
             <!-- Waktu & Biaya Layanan -->
-            <div class="card shadow-lg border-0 mx-3" style="min-width: 300px">
+            <div class="card shadow-lg border-0">
               <div class="card-body text-center">
                 <i class="bi bi-clock text-secondary display-4 mb-3"></i>
                 <h5 class="card-title">Waktu & Biaya Layanan</h5>
@@ -89,7 +133,7 @@
             </div>
 
             <!-- Maklumat Informasi Publik -->
-            <div class="card shadow-lg border-0 mx-3" style="min-width: 300px">
+            <div class="card shadow-lg border-0">
               <div class="card-body text-center">
                 <i class="bi bi-clipboard text-warning display-4 mb-3"></i>
                 <h5 class="card-title">Maklumat Informasi Publik</h5>
@@ -101,7 +145,7 @@
             </div>
 
             <!-- Libur Nasional dan Cuti Bersama -->
-            <div class="card shadow-lg border-0 mx-3" style="min-width: 300px">
+            <div class="card shadow-lg border-0">
               <div class="card-body text-center">
                 <i class="bi bi-calendar-check text-danger display-4 mb-3"></i>
                 <h5 class="card-title">Libur Nasional dan Cuti Bersama</h5>
@@ -112,8 +156,9 @@
               </div>
             </div>
           </div>
-
-      
+        </div>
+      </div>
+    </section>
 
     <script>
       const scrollContainer = document.querySelector(".services-wrapper");

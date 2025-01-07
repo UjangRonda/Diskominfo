@@ -1,3 +1,4 @@
+/* Global Styling */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
@@ -5,18 +6,22 @@ body {
   padding: 0;
 }
 
+/* Navbar Styling */
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000;
+}
+
 .navbar-brand {
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.2;
-  color: #000;
 }
 
 .navbar-nav .nav-link {
-  font-size: 0.85rem;
-  font-weight: 600;
   margin-left: 15px;
-  color: #000;
 }
 
 .navbar-nav .nav-link:hover {
@@ -24,70 +29,43 @@ body {
   color: #a55a42;
 }
 
-/*.header-bg {
-  background-image: url("../images/content utama.png");
-  background-size: cover;
-  background-position: center;
-}*/
-
+/* Container for Images */
 .container2 img {
   max-height: 170px;
   margin-bottom: 20px;
 }
 
+/* Search Bar Styling */
 .search-bar {
   max-width: 600px;
   margin: auto;
 }
 
-.search-btn {
+.search-btn,
+.custom-btn {
   background-color: #a55a42;
   color: white;
   border: none;
-  display: flex;
-  align-items: center;
   padding: 0.5em 1em;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
-.search-btn:hover {
+.search-btn:hover,
+.custom-btn:hover {
   background-color: #8b452f;
   cursor: pointer;
 }
 
-.search-icon {
-  margin-top: 5px;
-  width: 20px;
-  height: 20px;
-}
-
 .custom-btn {
-  background-color: #a55a42;
-  border: none;
-  color: white;
   font-weight: bold;
   text-align: center;
-  border-radius: 10px;
   padding: 15px;
+  border-radius: 10px;
 }
 
-.custom-btn:hover {
-  background-color: #8b452f;
-}
-
-.custom-icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.row {
-  gap: 20px;
-}
-
+/* Circle Button Styling */
 .circle-btn {
   background: #8b452f;
   border: 2px solid #290e05;
@@ -100,14 +78,14 @@ body {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  cursor: pointer;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .circle-btn:hover {
   background: #361004;
   color: #ffffff;
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Efek hover */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -121,18 +99,7 @@ body {
   transform: rotate(360deg);
 }
 
-.circle-text {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
-}
-
-.circle-btn:hover ~ .circle-text {
-  color: #8b452f;
-}
-
+/* Services Wrapper for Scrollable Cards */
 .services-wrapper {
   display: flex;
   gap: 1rem;
@@ -154,6 +121,7 @@ body {
   background: #f1f1f1;
 }
 
+/* Card Hover Effects */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -163,36 +131,9 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-#scroll-left,
-#scroll-right {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  #scroll-left,
-  #scroll-right {
-    display: inline-block;
-  }
-}
-
-.left-button {
-  top: 50%;
-  left: -1.5rem;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.right-button {
-  top: 50%;
-  right: -1.5rem;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-
-/* Footer */
+/* Footer Styling */
 .bg-custom {
-  background-color: #A55A42;
+  background-color: #a55a42;
 }
 
 .text-white {
@@ -214,7 +155,7 @@ body {
 }
 
 .footer_logo {
-  width: 50px; 
+  width: 50px;
   height: 50px;
 }
 
@@ -223,10 +164,6 @@ body {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 10px;
-}
-
-.ms-2 {
-  margin-left: 10px; 
 }
 
 .footer_text {
@@ -255,9 +192,8 @@ body {
   margin-top: 20px;
   border-top: 1px solid #ffffff;
   padding-top: 10px;
-  width: 70%; 
-  margin-left: auto;
-  margin-right: auto;
+  width: 70%;
+  margin: auto;
 }
 
 .copyright_text {
