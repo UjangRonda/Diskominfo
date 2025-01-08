@@ -13,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
     />
     <style>
-      .services-wrapper {
+    .services-wrapper {
         display: flex;
         gap: 1.5rem;
         overflow-x: auto;
@@ -23,6 +23,7 @@
       .services-wrapper::-webkit-scrollbar {
         display: none;
       }
+
       .scroll-button {
         position: absolute;
         top: 50%;
@@ -33,27 +34,88 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         cursor: pointer;
         padding: 0.5rem 1rem;
-        border-radius: 50%;
+        border-radius: 10%;
       }
+
       #scroll-left {
         left: 1rem;
       }
+
       #scroll-right {
         right: 1rem;
       }
+
       .card {
-        min-width: 300px;
-        transition: transform 0.3s;
+        width: 300px; 
+        height: 300px; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center;
       }
+
+      .card-title {
+        font-size: 19px;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-top: auto; 
+        margin-bottom: auto;
+      }
+
+      .img-responsive-icon {
+        max-width: 150px; 
+        height: auto;
+      }
+
+
       .card:hover {
         transform: translateY(-10px);
+      }
+
+      .bg-layanan {
+        background-image: url('images/bg1.png'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        border-radius: 10px; 
+        padding: 20px; 
+        color: white; 
+      }
+
+      .btn {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px; 
+      }
+      .card-link {
+        text-decoration: none;
+        color: inherit; 
+      }
+
+      .card-link:hover .card {
+        transform: translateY(-10px); 
+      }
+
+      .judul{
+        font-size: 28px;
+        font-weight: bold;
+        color: #A55A42;
+      }
+
+      .lead{
+        font-size: 17px; 
+        font-weight: 500;
+        line-height: 1.5;
       }
     </style>
   </head>
   <body>
     <section id="services" class="py-5 bg-light">
       <div class="container text-center">
-        <h2 class="mb-4">Layanan Kami</h2>
+        <h2 class="mb-4 judul">Layanan Kami</h2>
         <p class="lead">
           Berikut adalah layanan yang kami tawarkan untuk memastikan akses
           informasi publik yang transparan dan akuntabel.
@@ -61,100 +123,84 @@
 
         <div class="position-relative">
           <!-- Tombol Scroll -->
-          <button id="scroll-left" class="scroll-button">
+          <button id="scroll-left" class="scroll-button bg-warning">
             <i class="bi bi-chevron-left"></i>
           </button>
-          <button id="scroll-right" class="scroll-button">
+          <button id="scroll-right" class="scroll-button bg-warning">
             <i class="bi bi-chevron-right"></i>
           </button>
 
           <!-- Kontainer Layanan -->
           <div class="services-wrapper">
             <!-- Prosedur Pelayanan Informasi Publik -->
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <i class="bi bi-journal-text text-primary display-4 mb-3"></i>
-                <h5 class="card-title">Prosedur Pelayanan Informasi Publik</h5>
-                <p class="card-text">
-                  Panduan lengkap untuk mendapatkan informasi publik.
-                </p>
-                <a href="#" class="btn btn-primary">Selengkapnya</a>
+            <a href="#" class="card-link">
+              <div class="card shadow-lg border-0 bg-layanan">
+                <div class="card-body text-center">
+                  <img src="images/layanan1.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
+                  <h5 class="card-title">Prosedur Pelayanan Informasi Publik <br>  </h5>
+                </div>
               </div>
-            </div>
+            </a>
 
             <!-- Prosedur Penanganan Sengketa Informasi -->
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <i class="bi bi-shield-check text-danger display-4 mb-3"></i>
-                <h5 class="card-title">
-                  Prosedur Penanganan Sengketa Informasi
-                </h5>
-                <p class="card-text">
-                  Prosedur resmi untuk menangani sengketa informasi publik.
-                </p>
-                <a href="#" class="btn btn-danger">Selengkapnya</a>
+            <a href="#" class="card-link">
+              <div class="card shadow-lg border-0 bg-layanan">
+                <div class="card-body text-center">
+                  <img src="images/layanan2.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
+                  <h5 class="card-title">Prosedur Penanganan Sengketa Informasi</h5>
+                </div>
               </div>
-            </div>
+            </a>
 
             <!-- SOP PPID -->
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <i class="bi bi-book text-info display-4 mb-3"></i>
-                <h5 class="card-title">SOP PPID</h5>
-                <p class="card-text">
-                  Standar Operasional Prosedur PPID untuk informasi publik.
-                </p>
-                <a href="#" class="btn btn-info">Selengkapnya</a>
+            <a href="#" class="card-link">
+              <div class="card shadow-lg border-0 bg-layanan">
+                <div class="card-body text-center">
+                  <img src="images/layanan3.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
+                  <h5 class="card-title">SOP PPID</h5>
+                </div>
               </div>
-            </div>
+            </a>
 
             <!-- Kanal Layanan Informasi -->
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <i class="bi bi-telephone text-primary display-4 mb-3"></i>
-                <h5 class="card-title">Kanal Layanan Informasi</h5>
-                <p class="card-text">
-                  Saluran resmi untuk layanan informasi publik.
-                </p>
-                <a href="#" class="btn btn-primary">Selengkapnya</a>
+            <a href="#" class="card-link">
+              <div class="card shadow-lg border-0 bg-layanan">
+                <div class="card-body text-center">
+                  <img src="images/layanan4.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
+                  <h5 class="card-title">Kanal Layanan Informasi</h5>
+                </div>
               </div>
-            </div>
+            </a>
 
             <!-- Waktu & Biaya Layanan -->
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <i class="bi bi-clock text-secondary display-4 mb-3"></i>
-                <h5 class="card-title">Waktu & Biaya Layanan</h5>
-                <p class="card-text">
-                  Informasi tentang waktu dan biaya layanan informasi publik.
-                </p>
-                <a href="#" class="btn btn-secondary">Selengkapnya</a>
+            <a href="#" class="card-link">
+              <div class="card shadow-lg border-0 bg-layanan">
+                <div class="card-body text-center">
+                  <img src="images/layanan5.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
+                  <h5 class="card-title">Waktu & Biaya Layanan</h5>
+                </div>
               </div>
-            </div>
+            </a>
 
             <!-- Maklumat Informasi Publik -->
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <i class="bi bi-clipboard text-warning display-4 mb-3"></i>
-                <h5 class="card-title">Maklumat Informasi Publik</h5>
-                <p class="card-text">
-                  Pernyataan resmi terkait pelayanan informasi publik.
-                </p>
-                <a href="#" class="btn btn-warning">Selengkapnya</a>
+            <a href="#" class="card-link">
+              <div class="card shadow-lg border-0 bg-layanan">
+                <div class="card-body text-center">
+                  <img src="images/layanan6.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
+                  <h5 class="card-title">Maklumat Informasi Publik </h5>
+                </div>
               </div>
-            </div>
+            </a>
 
             <!-- Libur Nasional dan Cuti Bersama -->
-            <div class="card shadow-lg border-0">
-              <div class="card-body text-center">
-                <i class="bi bi-calendar-check text-danger display-4 mb-3"></i>
-                <h5 class="card-title">Libur Nasional dan Cuti Bersama</h5>
-                <p class="card-text">
-                  Jadwal libur nasional dan cuti bersama terkait layanan publik.
-                </p>
-                <a href="#" class="btn btn-danger">Selengkapnya</a>
+            <a href="#" class="card-link">
+              <div class="card shadow-lg border-0 bg-layanan">
+                <div class="card-body text-center">
+                  <img src="images/layanan7.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
+                  <h5 class="card-title">Libur Nasional dan Cuti Bersama</h5>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
