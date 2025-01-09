@@ -1,0 +1,26 @@
+/*
+Tambahin animasi ke sini ae biar yang gabut pengen naruh animasi gak males nyari di style.css
+*/
+
+.fade-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+    position: relative; 
+}
+
+.fade-content.fade-in {
+    opacity: 1;
+    visibility: visible;
+}
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
