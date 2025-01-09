@@ -37,6 +37,9 @@
   <div class="fade-content">
     <?php include 'main/penghargaan.html'; ?>
   </div>
+  <div class="fade-content">
+    <?php include 'main/berita.html'; ?>
+  </div>
 
   <?php include 'includes/footer.html'; ?>
 
