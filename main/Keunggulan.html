@@ -1,38 +1,121 @@
-<section id="keunggulan-layanan" class="py-5 bg-light">
+<style>
+  #keunggulan-layanan {
+    background-color: #f8f9fa; 
+    padding: 50px 0;
+    text-align: center; 
+  }
+
+  #keunggulan-layanan h3 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+
+  #keunggulan-layanan h3::after {
+    content: '';
+    display: block;
+    width: 100px; 
+    height: 4px; 
+    background-color: #A55A42; 
+    margin: 10px auto 0;
+    border-radius: 2px; 
+  }
+
+  #keunggulan-layanan p {
+    max-width: 700px; 
+    margin: 0 auto 2rem; 
+    font-size: 16px;
+    line-height: 1.6; 
+    color: #6c757d;
+  }
+
+  #keunggulan-layanan .single-card {
+    background-image: url('images/bg lagi.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px; 
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: space-between; 
+    align-items: stretch; 
+  }
+
+  #keunggulan-layanan .card-item {
+    background-color: white; 
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 30%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+
+  #keunggulan-layanan .card-item h5 {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  #keunggulan-layanan .card-item p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  #keunggulan-layanan .card-item i {
+    font-size: 40px;
+    color: #f4b400; 
+  }
+
+  @media (max-width: 768px) {
+    #keunggulan-layanan .card-item {
+      max-width: 100%; 
+      margin: 0 auto;
+    }
+    #keunggulan-layanan .single-card {
+      flex-direction: column; 
+    }
+  }
+</style>
+
+<section id="keunggulan-layanan">
   <div class="container">
-    <h3 class="text-center mb-4">Keunggulan Layanan Informasi Publik</h3>
-    <p class="text-center mb-5">
+    <h3>Keunggulan Layanan Informasi Publik</h3>
+    <p>
       Kami memastikan informasi publik yang tersedia dapat diakses secara
       transparan, cepat, dan mudah oleh masyarakat untuk mendukung akuntabilitas
       pemerintahan.
     </p>
-    <div class="row text-center">
+    <div class="single-card">
       <!-- Real-Time Updates -->
-      <div class="col-md-4 mb-4">
-        <i class="bi bi-clock-history text-primary display-4 mb-3"></i>
-        <h5 class="fw-bold">Informasi Terkini</h5>
+      <div class="card-item">
+        <i class="bi bi-clock-history text-primary"></i>
+        <h5>Informasi Terkini</h5>
         <p>
-          Menyediakan pembaruan data dan informasi secara real-time untuk
-          masyarakat.
+          Menyediakan pembaruan data dan informasi secara real-time untuk masyarakat.
         </p>
       </div>
       <!-- Easy Access -->
-      <div class="col-md-4 mb-4">
-        <i class="bi bi-cloud-download text-success display-4 mb-3"></i>
-        <h5 class="fw-bold">Aksesibilitas</h5>
+      <div class="card-item">
+        <i class="bi bi-cloud-download text-success"></i>
+        <h5>Aksesibilitas</h5>
         <p>
-          Informasi dapat diakses dan diunduh dengan mudah di perangkat apapun.
+          Informasi dapat diakses dan diunduh dengan mudah di perangkat apa pun.
         </p>
       </div>
       <!-- Deep Analysis -->
-      <div class="col-md-4 mb-4">
-        <i class="bi bi-graph-up text-warning display-4 mb-3"></i>
-        <h5 class="fw-bold">Transparansi Data</h5>
+      <div class="card-item">
+        <i class="bi bi-graph-up text-warning"></i>
+        <h5>Transparansi Data</h5>
         <p>
-          Memberikan data yang lengkap dan akurat untuk mendukung partisipasi
-          publik.
+          Memberikan data yang lengkap dan akurat untuk mendukung partisipasi publik.
         </p>
       </div>
     </div>
-
+  </div>
 </section>
