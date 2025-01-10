@@ -201,3 +201,117 @@ body {
   color: #ffffff;
 }
 
+/*Informasi publik style*/
+.info-publik-style {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+.info-publik-style .container {
+  max-width: 1140px;
+}
+.info-publik-style .card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.info-publik-style .card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+.info-publik-style .card i {
+  font-size: 60px;
+  margin: 1.5rem auto;
+  color: #a55a42;
+}
+.info-publik-style .card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #343a40;
+}
+.info-publik-style .card-text {
+  font-size: 18px;
+  color: #6c757d;
+}
+.info-publik-style .btn-view {
+  background-color: #a55a42;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 0.7rem 1.5rem;
+}
+.info-publik-style .btn-view:hover {
+  background-color: #8b4b39;
+}
+
+/*Pusat Informasi Style*/
+#atraksi-informasi {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #a55a42;
+  padding: 3rem 0;
+}
+
+.informasi {
+  font-size: 32px;
+  font-weight: bold;
+  color: #a55a42;
+}
+
+.info {
+  font-size: 24px;
+  font-weight: bold;
+  color: #a55a42;
+}
+
+.info + p,
+.info-list {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #5a4035;
+}
+
+.info-list {
+  padding-left: 1.5rem;
+}
+
+.info-list li {
+  margin-bottom: 0.5rem;
+}
+
+.btn-custom {
+  background-color: #a55a42;
+  border-color: #a55a42;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #8b4b39;
+  transform: translateY(-3px);
+}
+
+#atraksi-informasi img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add subtle separator lines for extra elegance */
+#atraksi-informasi .row {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 2rem;
+}
+
+#atraksi-informasi .row:first-of-type {
+  border-top: none;
+}
