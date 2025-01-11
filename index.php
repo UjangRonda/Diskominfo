@@ -12,7 +12,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animation.css" />
 </head>
@@ -45,25 +45,40 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-
-    /* BUAT NGILANG!!! */
     function isInViewport(element) {
       const rect = element.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+      const viewportHeight = window.innerHeight;
+
+      return (rect.top < viewportHeight * 0.6 && rect.bottom > viewportHeight * 0.5);
+
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-      const contentElements = document.querySelectorAll('.fade-content');
+      const contentElements = document.querySelectorAll('.fade-content, .pop-content');
+      const groupElements = document.querySelectorAll('.groupInfo');
 
       window.addEventListener('scroll', function() {
-        contentElements.forEach((element, index) => {
+        contentElements.forEach((element) => {
           if (isInViewport(element)) {
-            element.classList.add('fade-in');
+            if (element.classList.contains('fade-content')) {
+              element.classList.add('fade-in');
+            } else if (element.classList.contains('pop-content')) {
+              element.classList.add('pop-in');
+            }
+          }
+        });
+
+        contentElements.forEach((element) => {
+          if (element.classList.contains('pop-content') && isInViewport(element)) {
+            document.querySelectorAll('.pop-content').forEach((popElement) => {
+              popElement.classList.add('pop-in');
+            });
           }
         });
       });
     });
   </script>
+
 
 </body>
 
