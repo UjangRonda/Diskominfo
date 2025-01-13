@@ -1,5 +1,5 @@
 <style>
-  .card1 {
+  .berita-container .card1 {
     border: none;
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
@@ -9,11 +9,11 @@
     justify-content: space-between;
   }
 
-  .card1:hover {
+  .berita-container .card1:hover {
     transform: translateY(-5px);
   }
 
-  .card1-body {
+  .berita-container .card1-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,7 +22,7 @@
     padding-top: 10px;
   }
 
-  .card1-title {
+  .berita-container .card1-title {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -31,7 +31,7 @@
     font-family: "Poppins", sans-serif;
   }
 
-  .btn-read-more1 {
+  .berita-container .btn-read-more1 {
     background-color: #a55a42;
     color: white;
     width: 45%;
@@ -41,22 +41,22 @@
     padding: 5px 0;
     line-height: 1;
     border-radius: 5px;
-    margin-top: auto; 
+    margin-top: auto;
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.2s ease;
     font-family: "Poppins", sans-serif;
   }
 
-  .btn-read-more1:hover {
+  .berita-container .btn-read-more1:hover {
     background-color: #8e4e38;
   }
 
-  .btn-read-more1:active {
-    background-color: #7c4532; 
+  .berita-container .btn-read-more1:active {
+    background-color: #7c4532;
   }
 
-  .section-title {
+  .berita-container .section-title {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
@@ -64,8 +64,8 @@
     font-family: "Poppins", sans-serif;
   }
 
-  .section-title::after {
-    content: '';
+  .berita-container .section-title::after {
+    content: "";
     display: block;
     width: 60px;
     height: 3px;
@@ -73,109 +73,151 @@
     margin: 5px auto 20px auto;
   }
 
-  .btn-2 {
+  .berita-container .btn-2 {
     background-color: #a55a42;
     color: white;
     width: 45%;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 0; 
+    padding: 10px 0;
     line-height: 1;
     border-radius: 5px;
     margin-top: auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; 
+    transition: transform 0.2s ease, background-color 0.2s ease,
+      box-shadow 0.2s ease;
     border: none;
     outline: none;
   }
 
-  .btn-2:hover {
+  .berita-container .btn-2:hover {
     transform: scale(1.1);
     background-color: #8e4e38;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
   }
 
-  .btn-2:active {
+  .berita-container .btn-2:active {
     transform: scale(1.2);
     background-color: #7c4532;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .d-flex.justify-content-between {
+  .berita-container .d-flex.justify-content-between {
     margin-top: auto;
   }
 
-  .card1-img-top {
+  .berita-container .card1-img-top {
     width: 100%;
-    height: 150px; 
+    height: 150px;
     object-fit: cover;
   }
 </style>
 
-<section>
-    <div class="container my-5">
-        <h2 class="section-title">Berita Kota Surakarta</h2>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="card1">
-                    <img src="https://asset.kompas.com/crops/zc7yyQwBZD83GE_YJduI0V3mVME=/0x0:0x0/1200x800/data/photo/2025/01/09/677f86e33709e.jpg"
-                        class="card1-img-top" alt="Berita 1">
-                    <div class="card1-body">
-                        <h6 class="card1-title">KPU Solo Tetapkan Respati-Astrid sebagai Wali Kota dan Wakil.....</h6>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://regional.kompas.com/read/2025/01/09/155812778/kpu-solo-tetapkan-respati-astrid-sebagai-wali-kota-dan-wakil-wali-kota"
-                                class="btn btn-read-more1 btn-sm">Read More →</a>
-                            <small class="text-muted"><i class="bi bi-clock"></i> 5 jam yang lalu</small>
-                        </div>
-                    </div>
-                </div>
+<section class="berita-container">
+  <div class="container my-5">
+    <h2 class="section-title">Berita Kota Surakarta</h2>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="card1">
+          <img
+            src="https://asset.kompas.com/crops/zc7yyQwBZD83GE_YJduI0V3mVME=/0x0:0x0/1200x800/data/photo/2025/01/09/677f86e33709e.jpg"
+            class="card1-img-top"
+            alt="Berita 1"
+          />
+          <div class="card1-body">
+            <h6 class="card1-title">
+              KPU Solo Tetapkan Respati-Astrid sebagai Wali Kota dan Wakil.....
+            </h6>
+            <div class="d-flex justify-content-between align-items-center">
+              <a
+                href="https://regional.kompas.com/read/2025/01/09/155812778/kpu-solo-tetapkan-respati-astrid-sebagai-wali-kota-dan-wakil-wali-kota"
+                class="btn btn-read-more1 btn-sm"
+                >Read More →</a
+              >
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i> 5 jam yang lalu</small
+              >
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="card1">
-                    <img src="https://asset.kompas.com/crops/c2YPxwqHWyfskorIm-B0a5TrHTo=/174x0:1279x737/1200x800/data/photo/2024/10/31/6723b39a05e45.jpg"
-                        class="card1-img-top" alt="Berita 2">
-                    <div class="card1-body">
-                        <h6 class="card1-title">Jadwal KRL Solo-Jogja 6-12 Januari 2025 dari Palur ke.....</h6>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://www.kompas.com/jawa-tengah/read/2025/01/06/055800588/jadwal-krl-solo-jogja-6-12-januari-2025-dari-palur-ke-yogyakarta"
-                                class="btn btn-read-more1 btn-sm">Read More →</a>
-                            <small class="text-muted"><i class="bi bi-clock"></i> 3 hari yang lalu</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card1">
-                    <img src="https://asset.kompas.com/crops/nZbDP4iXD7bojvo5ROUNqKr0H5Q=/0x0:0x0/1200x800/data/photo/2022/10/31/635fc0fe763c7.jpg"
-                        class="card1-img-top" alt="Berita 3">
-                    <div class="card1-body">
-                        <h6 class="card1-title">Penumpang BST Solo Keluhkan Waktu Tunggu yang Lama, Ternyata Ini Sebabnya.....</h6>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://www.kompas.com/jawa-tengah/read/2025/01/07/131431488/penumpang-bst-solo-keluhkan-waktu-tunggu-yang-lama-ternyata-ini"
-                                class="btn btn-read-more1 btn-sm">Read More →</a>
-                            <small class="text-muted"><i class="bi bi-clock"></i> 1 hari yang lalu</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card1">
-                    <img src="https://asset.kompas.com/crops/neR8QPMmF76L42zVFFzTu8x2oKU=/0x0:0x0/1200x800/data/photo/2025/01/08/677e80e9e13a3.jpg"
-                        class="card1-img-top" alt="Berita 4">
-                    <div class="card1-body">
-                        <h6 class="card1-title">Polisi Tangkap Pelaku Penipuan Tiket Piala AFF 2024 di Solo.....</h6>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://regional.kompas.com/read/2025/01/08/205740578/polisi-tangkap-pelaku-penipuan-tiket-piala-aff-2024-di-solo"
-                                class="btn btn-read-more1 btn-sm">Read More →</a>
-                            <small class="text-muted"><i class="bi bi-clock"></i> 1 hari yang lalu</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="text-center mt-3">
-            <a href="#" class="btn btn-primary btn-2">BERITA LAINNYA →</a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card1">
+          <img
+            src="https://asset.kompas.com/crops/c2YPxwqHWyfskorIm-B0a5TrHTo=/174x0:1279x737/1200x800/data/photo/2024/10/31/6723b39a05e45.jpg"
+            class="card1-img-top"
+            alt="Berita 2"
+          />
+          <div class="card1-body">
+            <h6 class="card1-title">
+              Jadwal KRL Solo-Jogja 6-12 Januari 2025 dari Palur ke.....
+            </h6>
+            <div class="d-flex justify-content-between align-items-center">
+              <a
+                href="https://www.kompas.com/jawa-tengah/read/2025/01/06/055800588/jadwal-krl-solo-jogja-6-12-januari-2025-dari-palur-ke-yogyakarta"
+                class="btn btn-read-more1 btn-sm"
+                >Read More →</a
+              >
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i> 3 hari yang lalu</small
+              >
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card1">
+          <img
+            src="https://asset.kompas.com/crops/nZbDP4iXD7bojvo5ROUNqKr0H5Q=/0x0:0x0/1200x800/data/photo/2022/10/31/635fc0fe763c7.jpg"
+            class="card1-img-top"
+            alt="Berita 3"
+          />
+          <div class="card1-body">
+            <h6 class="card1-title">
+              Penumpang BST Solo Keluhkan Waktu Tunggu yang Lama, Ternyata Ini
+              Sebabnya.....
+            </h6>
+            <div class="d-flex justify-content-between align-items-center">
+              <a
+                href="https://www.kompas.com/jawa-tengah/read/2025/01/07/131431488/penumpang-bst-solo-keluhkan-waktu-tunggu-yang-lama-ternyata-ini"
+                class="btn btn-read-more1 btn-sm"
+                >Read More →</a
+              >
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i> 1 hari yang lalu</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card1">
+          <img
+            src="https://asset.kompas.com/crops/neR8QPMmF76L42zVFFzTu8x2oKU=/0x0:0x0/1200x800/data/photo/2025/01/08/677e80e9e13a3.jpg"
+            class="card1-img-top"
+            alt="Berita 4"
+          />
+          <div class="card1-body">
+            <h6 class="card1-title">
+              Polisi Tangkap Pelaku Penipuan Tiket Piala AFF 2024 di Solo.....
+            </h6>
+            <div class="d-flex justify-content-between align-items-center">
+              <a
+                href="https://regional.kompas.com/read/2025/01/08/205740578/polisi-tangkap-pelaku-penipuan-tiket-piala-aff-2024-di-solo"
+                class="btn btn-read-more1 btn-sm"
+                >Read More →</a
+              >
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i> 1 hari yang lalu</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="text-center mt-3">
+      <a href="#" class="btn btn-primary btn-2">BERITA LAINNYA →</a>
+    </div>
+  </div>
 </section>

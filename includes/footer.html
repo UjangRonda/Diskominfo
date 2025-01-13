@@ -1,183 +1,114 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .bg-custom {
-    background-color: #a55a42;
-  }
-
-  .py-3 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .logo-title {
-    display: flex;
-  }
-
-  .footer_logo {
-    width: 70px;
-    height: 70px;
-  }
-
-  .footer_title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 10px;
-    text-align: center; 
-  }
-
-  .footer_title2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .footer_text {
-    font-size: 12px; 
-    color: #ffffff;
-    line-height: 1.8;
-    text-align: left;
-  }
-
-  .footer_text1 {
-    font-size: 16px; 
-    color: #ffffff;
-    line-height: 1.8;
-    text-align: left;
-  }
-
-  .map-container iframe {
-    width: 90%;
-    height: 300px;
-    border: 0;
-    border-radius: 5px; 
-  }
-
-  .statistik_pengunjung {
-    max-width: 300px;
-    height: 220px; 
-    margin-left: 30px;
-    margin-right: auto;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #000;
-    text-align: left;
-    padding: 10px;
-  }
-
-  .statistik_pengunjung .footer_title {
-    margin-bottom: 15px;
-    text-align: center; 
-  }
-
-  .statistik_pengunjung p {
-    font-size: 12px; 
-    margin-bottom: 10px;
-  }
-
-  .statistik_pengunjung .footer_text {
-    font-size: 12px; 
-  }
-
-  .statistik_pengunjung .footer_text span {
-    display: flex;
-    justify-content: space-between;
-    padding: 3px 0;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .statistik_pengunjung .footer_text span:last-child {
-    border-bottom: none;
-  }
-
-  .social_icons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .social_icon img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-  }
-
-  .social_icon img:hover {
-    transform: scale(1.2);
-  }
-
-  .copyright_section {
-    margin-top: 30px;
-    border-top: 1px solid #ffffff;
-    padding-top: 10px;
-    text-align: center; 
-  }
-
-  .copyright_text {
-    font-size: 14px;
-    color: #ffffff;
-  }
-</style>
-
-<footer class="bg-custom text-white py-3">
-  <div class="section_footer">
-    <div class="container">
-      <div class="row justify-content-between align-items-start">
-        <div class="col-md-4 text-start">
-          <div class="logo-title d-flex align-items-center">
-            <img src="images/Logo Diskominfo.png" alt="Logo Diskominfo" class="footer_logo" />
-            <h2 class="footer_title ms-2">PPID Kota Surakarta</h2>
-          </div>
-          <p class="footer_text1">
-            Kompleks Balai Kota Surakarta <br />
-            Jl. Jend. Sudirman No.2, <br />
-            Kota Surakarta, Jawa Tengah <br />
-            Kode Pos 57133 <br />
-            (0271) 2931667
-          </p>
-        </div>
-
-        <div class="col-md-4 map-container">
-          <iframe
-            src="https://maps.google.com/maps?q=Kompleks%20Balai%20Kota%20Surakarta%20Jl.%20Jend.%20Sudirman%20No.2,%20Kota%20Surakarta,%20Jawa%20Tengah&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            allowfullscreen=""
-            loading="lazy"></iframe>
-        </div>
-
-        <div class="col-md-4">
-          <div class="statistik_pengunjung p-3 bg-white rounded shadow-sm">
-            <h2 class="footer_title text-black">Statistik Pengunjung</h2>
-            <p class="footer_text text-black">
-              <span>Hari ini<span>251</span></span>
-              <span>Kemarin<span>1,704</span></span>
-              <span>Bulan Ini<span>17,407</span></span>
-              <span>Tahun Ini<span>17,407</span></span>
-              <span>Total<span>637,932</span></span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer Kota Surakarta</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <footer class="footer">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <!-- PPID Section -->
+          <div class="col-md-4">
+            <h6>PPID Kota Surakarta</h6>
+            <p>
+              Kompleks Balai Kota Surakarta<br />
+              Jl. Jend. Sudirman No.2, Kota Surakarta, Jawa Tengah<br />
+              Telp: 2931667 - Fax: +62 21 382 3252<br />
+              Email:
+              <a href="mailto:ppid@surakarta.go.id">ppid@surakarta.go.id</a>
             </p>
+            <div class="social-icons">
+              <a href="https://twitter.com" target="_blank"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="https://instagram.com" target="_blank"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="mailto:ppid@surakarta.go.id"
+                ><i class="bi bi-envelope"></i
+              ></a>
+            </div>
           </div>
 
-          <div class="mt-3">
-            <h2 class="footer_title2 text-white">Contact Us</h2>
-            <div class="social_icons">
-              <a href="#" class="social_icon"><img src="images/fb-icon.png" alt="Facebook" /></a>
-              <a href="#" class="social_icon"><img src="images/instagram-icon.png" alt="Instagram" /></a>
-              <a href="#" class="social_icon"><img src="images/twitter-icon.png" alt="X" /></a>
-              <a href="#" class="social_icon"><img src="images/youtube icon.png" alt="YouTube" /></a>
+          <!-- Map Section -->
+          <div class="col-md-4">
+            <h6>Lokasi</h6>
+            <div class="map-container">
+              <iframe
+                src="https://maps.google.com/maps?q=Kompleks%20Balai%20Kota%20Surakarta%20Jl.%20Jend.%20Sudirman%20No.2,%20Kota%20Surakarta,%20Jawa%20Tengah&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Statistics Section -->
+          <div class="col-md-4 stat-section">
+            <h6>Statistik Pengunjung</h6>
+            <p>Hari Ini: <span class="stat-number">1,234</span></p>
+            <p>Total: <span class="stat-number">51,967</span></p>
+            <div class="chart-container">
+              <canvas id="visitorChart"></canvas>
             </div>
           </div>
         </div>
+        <div class="separator"></div>
+        <p class="text-center mb-0">
+          © 2022 Dinas Komunikasi, Informatika, dan Statistik Kota Surakarta
+        </p>
       </div>
-    </div>
-    <div class="copyright_section mt-3">
-      <p class="copyright_text">&copy;2025 PPID Kota Surakarta</p>
-    </div>
-  </div>
-</footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Visitor Statistics Chart
+      const ctx = document.getElementById("visitorChart").getContext("2d");
+      const visitorChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Sen", "Sel", "Rab", "Kam", "Jum", "Sab", "Min"],
+          datasets: [
+            {
+              label: "Pengunjung Harian",
+              data: [1200, 1500, 1100, 2000, 2300, 1800, 1700],
+              backgroundColor: "rgba(255, 205, 132, 0.9)",
+              borderRadius: 4,
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+              },
+            },
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: "rgba(255, 255, 255, 0.2)",
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -131,7 +131,6 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 /*Informasi publik style*/
 .info-publik-style {
   font-family: Arial, sans-serif;
@@ -245,4 +244,85 @@ body {
 
 #atraksi-informasi .row:first-of-type {
   border-top: none;
+}
+
+/*Footer Section*/
+.footer {
+  background: linear-gradient(135deg, #8b3e2f, #b84e3a);
+  color: #fceee4;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+.footer h6 {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffcdb2;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.footer p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: #ffd7a3;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #ffe4b5;
+}
+
+.footer .map-container {
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer .stat-section {
+  text-align: center;
+}
+
+.footer .stat-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffe4b5;
+}
+
+.footer .chart-container {
+  height: 180px;
+  margin-top: 15px;
+}
+
+.footer .social-icons {
+  margin-top: 12px;
+}
+
+.footer .social-icons a {
+  margin-right: 12px;
+  color: #ffd7a3;
+  font-size: 20px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #ffead5;
+  transform: scale(1.1);
+}
+
+.footer .separator {
+  border-top: 1px solid #d3a594;
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  .footer .row > div {
+    margin-bottom: 20px;
+  }
 }
