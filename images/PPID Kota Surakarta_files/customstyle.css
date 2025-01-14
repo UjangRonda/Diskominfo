@@ -1,0 +1,65 @@
+.gridcat {
+	border:2px solid rgb(237, 237, 237);
+	padding: 15px;
+}
+.headlist{
+	background:rgb(35, 43, 80);
+	padding: 10px;
+}
+.headlist:before {
+	content: "\f0f2";
+	font-family: FontAwesome;
+	color: #fff;
+	font-size: 20px;
+	padding-right: 5px;
+}
+
+.headlist a{
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.isi {
+	font-size: 15px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+.isi a{
+	color: #595959;
+}
+
+.isi:before {
+	content: "\f0f6";
+	font-family: FontAwesome;
+	color: #959595;
+	font-size: 15px;
+	padding-right: 5px;
+}
+
+.bawahlist {
+	margin-top:10px;
+	right:0;
+}
+
+.listem {
+	border-bottom:2px dotted rgb(237, 237, 237);
+	text-transform: uppercase;
+}
+
+.listem  a{
+	color: #595959;
+}
+
+.listem h3:before {
+	content: "\f0f6";
+	font-family: FontAwesome;
+	color: #959595;
+	font-size: 30px;
+	padding-right: 15px;
+}
+
+.breadcrumbs {
+	text-transform: uppercase;
+}
