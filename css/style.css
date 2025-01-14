@@ -150,7 +150,8 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   max-width: 300px;
-  margin: 0 auto;
+  max-height: 280px;
+  margin: 0 0;
 }
 .info-publik-style .card:hover {
   transform: translateY(-7px);
@@ -162,12 +163,12 @@ body {
   color: #a55a42;
 }
 .info-publik-style .card-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   color: #343a40;
 }
 .info-publik-style .card-text {
-  font-size: 18px;
+  font-size: 16px;
   color: #6c757d;
 }
 .info-publik-style .btn-view {
