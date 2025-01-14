@@ -51,30 +51,31 @@
       color: white;
       margin-bottom: 30px;
     }
+
     .title-visi-misi {
       margin-bottom: 20px;
       margin-top: 60px;
     }
 
-    .title-visi-misi h1{
+    .title-visi-misi h1 {
       font-size: 32px;
       font-weight: bold;
       text-align: left;
       text-transform: uppercase;
-      font-family: 'Poppins', sans-serif; 
+      font-family: 'Poppins', sans-serif;
     }
 
     .sub-title-visi-misi {
       font-size: 18px;
       margin-bottom: 10px;
-      font-family: 'Poppins', sans-serif; 
+      font-family: 'Poppins', sans-serif;
       text-align: left;
     }
 
     .title-visi-misi::after {
       content: '';
       display: block;
-      width: 90px; 
+      width: 90px;
       height: 5px;
       background-color: #a55a42;
       margin-top: 5px;
@@ -99,6 +100,106 @@
         font-size: 18px;
       }
     }
+
+    .h1-title-sub-prpfile {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 40px;
+    }
+
+    .h1-title-sub-prpfile::after {
+      content: '';
+      display: block;
+      width: 90px;
+      height: 5px;
+      background-color: #a55a42;
+      margin: 15px auto 15px auto;
+    }
+
+    .subtitle-sub-profile {
+      font-size: 19px;
+      margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    /* Styling untuk shadowed boxes */
+    .shadow-box {
+      display: flex;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      margin-bottom: 20px;
+      flex-direction: row-reverse; 
+    }
+
+    .shadow-box img {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      margin-left: 10px;
+    }
+
+    .shadow-box .text-content {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 60%;
+      font-size: 14px; 
+      text-align: left;
+    }
+
+    .shadow-box .text-content h2, 
+    .shadow-box .text-content h4, 
+    .shadow-box .text-content p {
+      margin: 0;
+      padding-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .shadow-box .text-content p {
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .desk-layanan .col-md-6 {
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .desk-layanan .btn {
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+      .desk-layanan .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .desk-layanan .col-md-6 img {
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+
+    .item-img-tugas-bagan {
+      width: 100%; 
+      height: 80%; 
+      object-fit: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
 </head>
 
@@ -111,12 +212,10 @@
       <div class="row text-overlay">
         <div class="col-12 text-center">
           <div class="logo-profile-section mb-3">
-            <img src="images/Logo Diskominfo.png" alt="Logo Solo: The Spirit of Java" class="img-logo-profile"
-              style="max-width: 180px; height: auto; padding-top: -30px;" />
+            <img src="images/Logo Diskominfo.png" alt="Logo Solo: The Spirit of Java" class="img-logo-profile" style="max-width: 180px; height: auto; padding-top: -30px;" />
           </div>
           <h1 class="title-profile text-white">PROFILE</h1>
-          <h3 class="subtitle-profile text-white">PEJABAT PENGELOLA INFORMASI DAN DOKUMENTASI ( PPID )<br>KOTA
-            SURAKARTA</h3>
+          <h3 class="subtitle-profile text-white">PEJABAT PENGELOLA INFORMASI DAN DOKUMENTASI ( PPID )<br>KOTA SURAKARTA</h3>
         </div>
       </div>
     </div>
@@ -135,18 +234,72 @@
           <li>Meningkatkan kualitas kesehatan masyarakat yang tangguh.</li>
           <li>Memperkuat pertumbuhan ekonomi yang adaptif dan berkelanjutan.</li>
           <li>Mewujudkan tata ruang dan infrastruktur kota yang mendukung pemajuan kebudayaan dan pariwisata.</li>
-          <li>Meningkatkan kualitas dan daya saing pemuda dan masyarakat umum, di bidang pendidikan, ekonomi, seni
-            budaya, dan olahraga.</li>
-          <li>Mengembangkan tata kelola pemerintahan dan pelayanan publik yang gesit dan kolaboratif berlandaskan
-            semangat gotong royong dan kebinekaan.</li>
+          <li>Meningkatkan kualitas dan daya saing pemuda dan masyarakat umum, di bidang pendidikan, ekonomi, seni budaya, dan olahraga.</li>
+          <li>Mengembangkan tata kelola pemerintahan dan pelayanan publik yang gesit dan kolaboratif berlandaskan semangat gotong royong dan kebinekaan.</li>
           <li>Mewujudkan kemakmuran dan kesejahteraan bersama warga kota yang berkeadilan dan inklusif.</li>
-          <li>Mewujudkan daerah yang kondusif dan kerukunan antar umat beragama dalam tata kehidupan bermasyarakat yang
-            saling menghormati.</li>
+          <li>Mewujudkan daerah yang kondusif dan kerukunan antar umat beragama dalam tata kehidupan bermasyarakat yang saling menghormati.</li>
         </ul>
+      </div>
+
+      <div class="title-sub-prpfile text-center">
+        <h1 class="h1-title-sub-prpfile text-center">TUGAS DAN FUNGSI PPID</h1>
+        <p class="subtitle-sub-profile text-center">Pejabat Pengelola Informasi dan Dokumentasi Kota Surakarta</p>
+        <img src="images/tugas.png" alt="#" class="item-img-tugas-bagan">
+      </div>
+
+      <div class="title-sub-prpfile text-center">
+        <h1 class="h1-title-sub-prpfile text-center">BAGAN ORGANISASI</h1>
+        <p class="subtitle-sub-profile text-center">Pejabat Pengelola Informasi dan Dokumentasi Kota Surakarta</p>
+        <img src="images/bagan.png" alt="#" class="item-img-tugas-bagan">
+      </div>
+
+      <div class="title-sub-prpfile text-center">
+        <h1 class="h1-title-sub-prpfile text-center">DESK LAYANAN</h1>
+        <p class="subtitle-sub-profile text-center">Pejabat Pengelola Informasi dan Dokumentasi Kota Surakarta</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="shadow-box">
+          <img src="images/ppid utama.png" alt="Layanan PPID Utama">
+            <div class="text-content">
+              <h4 class="text-warning">DESK LAYANAN</h4>
+              <h2 class="fw-bold mb-2">PPID UTAMA</h2>
+              <p class="text-muted">
+              Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="bi bi-geo-alt-fill"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
+                <li class="mb-2"><i class="bi bi-envelope-fill"></i> ppidutama@surakarta.go.id</li>
+                <li><i class="bi bi-clock-fill"></i> Senin s/d Kamis 07.30 - 16.00, Jumat 07.30 - 16.30</li>
+              </ul>
+              <a href="#" class="btn btn-warning text-white fw-bold mt-3">Kunjungi Sekarang →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="shadow-box">
+          <img src="images/mall layanan.png" alt="Layanan PPID Utama">
+            <div class="text-content">
+              <h4 class="text-warning">DESK LAYANAN</h4>
+              <h2 class="fw-bold mb-2">MALL PELAYANAN PUBLIK</h2>
+              <p class="text-muted">
+              Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="bi bi-geo-alt-fill"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
+                <li class="mb-2"><i class="bi bi-envelope-fill"></i> ppidutama@surakarta.go.id</li>
+                <li><i class="bi bi-clock-fill"></i> Senin s/d Jumat 08.30 - 14.30</li>
+              </ul>
+              <a href="#" class="btn btn-warning text-white fw-bold mt-3">Kunjungi Sekarang →</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <?php include 'includes/footer.html'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
