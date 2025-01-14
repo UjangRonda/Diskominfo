@@ -1,227 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layanan Kami</title>
+    <title>Layanan Informasi Publik</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
     />
     <style>
-    .services-wrapper {
-        display: flex;
-        gap: 1.5rem;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        padding: 1rem;
-      }
-      .services-wrapper::-webkit-scrollbar {
-        display: none;
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
       }
 
-      .scroll-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        background-color: rgba(255, 255, 255, 0.8);
-        border: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-        border-radius: 10%;
-      }
-
-      #scroll-left {
-        left: 1rem;
-      }
-
-      #scroll-right {
-        right: 1rem;
-      }
-
-      .card {
-        width: 300px; 
-        height: 300px; 
-        display: flex;
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center; 
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
         text-align: center;
       }
 
-      .card-title {
-        font-size: 19px;
-        font-weight: bold;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin-top: auto; 
-        margin-bottom: auto;
-      }
-      .card-body{
-        height: 250px;
+      .header {
+        background-color: #003366;
+        padding: 20px;
+        color: white;
       }
 
-      .img-responsive-icon {
-        max-width: 150px; 
-        height: auto;
+      .header-title {
+        margin-top: 10px;
+        font-size: 1.5em;
       }
 
-
-      .card:hover {
-        transform: translateY(-10px);
+      .grid {
+        display: grid;
+        gap: 20px;
       }
 
-      .bg-layanan {
-        background-image: url('images/bg1.png'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        border-radius: 10px; 
-        padding: 20px; 
-        color: white; 
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 40px;
       }
 
-      .btn {
-        font-size: 16px;
-        font-weight: bold;
-        padding: 0.5rem 1.5rem;
-        border-radius: 25px; 
+      .grid-5 {
+        grid-template-columns: repeat(5, 1fr);
       }
-      .card-link {
+
+      .box {
+        background: linear-gradient(135deg, #8b3e2f, #b84e3a);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .box a {
         text-decoration: none;
-        color: inherit; 
-      }
-
-      .card-link:hover .card {
-        transform: translateY(-10px); 
-      }
-
-      .judul{
-        font-size: 28px;
+        color: white;
         font-weight: bold;
-        color: #A55A42;
+        font-size: 1em;
+        text-align: center;
       }
 
-      .lead{
-        font-size: 17px; 
-        font-weight: 500;
-        line-height: 1.5;
+      .box a:hover {
+        text-decoration: underline;
+      }
+
+      .box i {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      .see-all {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .see-all a {
+        color: #8b3e2f;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .see-all a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <section id="services" class="py-5 bg-light">
-      <div class="container text-center">
-        <h2 class="mb-4 judul">Layanan Kami</h2>
-        <p class="lead">
-          Berikut adalah layanan yang kami tawarkan untuk memastikan akses
-          informasi publik yang transparan dan akuntabel.
-        </p>
-
-        <div class="position-relative">
-          <!-- Tombol Scroll -->
-          <button id="scroll-left" class="scroll-button bg-warning">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-          <button id="scroll-right" class="scroll-button bg-warning">
-            <i class="bi bi-chevron-right"></i>
-          </button>
-
-          <!-- Kontainer Layanan -->
-          <div class="services-wrapper">
-            <!-- Prosedur Pelayanan Informasi Publik -->
-            <a href="#" class="card-link">
-              <div class="card shadow-lg border-0 bg-layanan">
-                <div class="card-body text-center">
-                  <img src="images/layanan1.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
-                  <h5 class="card-title">Prosedur Pelayanan Informasi Publik <br>  </h5>
-                </div>
-              </div>
-            </a>
-
-            <!-- Prosedur Penanganan Sengketa Informasi -->
-            <a href="#" class="card-link">
-              <div class="card shadow-lg border-0 bg-layanan">
-                <div class="card-body text-center">
-                  <img src="images/layanan2.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
-                  <h5 class="card-title">Prosedur Penanganan Sengketa Informasi</h5>
-                </div>
-              </div>
-            </a>
-
-            <!-- SOP PPID -->
-            <a href="#" class="card-link">
-              <div class="card shadow-lg border-0 bg-layanan">
-                <div class="card-body text-center">
-                  <img src="images/layanan3.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
-                  <h5 class="card-title">SOP PPID</h5>
-                </div>
-              </div>
-            </a>
-
-            <!-- Kanal Layanan Informasi -->
-            <a href="#" class="card-link">
-              <div class="card shadow-lg border-0 bg-layanan">
-                <div class="card-body text-center">
-                  <img src="images/layanan4.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
-                  <h5 class="card-title">Kanal Layanan Informasi</h5>
-                </div>
-              </div>
-            </a>
-
-            <!-- Waktu & Biaya Layanan -->
-            <a href="#" class="card-link">
-              <div class="card shadow-lg border-0 bg-layanan">
-                <div class="card-body text-center">
-                  <img src="images/layanan5.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
-                  <h5 class="card-title">Waktu & Biaya Layanan</h5>
-                </div>
-              </div>
-            </a>
-
-            <!-- Maklumat Informasi Publik -->
-            <a href="#" class="card-link">
-              <div class="card shadow-lg border-0 bg-layanan">
-                <div class="card-body text-center">
-                  <img src="images/layanan6.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
-                  <h5 class="card-title">Maklumat Informasi Publik </h5>
-                </div>
-              </div>
-            </a>
-
-            <!-- Libur Nasional dan Cuti Bersama -->
-            <a href="#" class="card-link">
-              <div class="card shadow-lg border-0 bg-layanan">
-                <div class="card-body text-center">
-                  <img src="images/layanan7.png" alt="Ikon Catatan" class="img-responsive-icon mb-3">
-                  <h5 class="card-title">Libur Nasional dan Cuti Bersama</h5>
-                </div>
-              </div>
-            </a>
-          </div>
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="box">
+          <i class="bi bi-file-earmark-text"></i>
+          <a href="#">Form Permohonan Informasi Publik</a>
+        </div>
+        <div class="box">
+          <i class="bi bi-file-earmark-excel"></i>
+          <a href="#">Form Pengajuan Keberatan</a>
         </div>
       </div>
-    </section>
 
-    <script>
-      const scrollContainer = document.querySelector(".services-wrapper");
-      const scrollLeftButton = document.getElementById("scroll-left");
-      const scrollRightButton = document.getElementById("scroll-right");
+      <div class="grid grid-5">
+        <div class="box">
+          <i class="bi bi-clipboard-data"></i>
+          <a href="#">Daftar Informasi Publik PPID Perangkat Daerah</a>
+        </div>
+        <div class="box">
+          <i class="bi bi-search"></i>
+          <a href="#">Cek Status Permohonan Informasi Publik</a>
+        </div>
+        <div class="box">
+          <i class="bi bi-journal-x"></i>
+          <a href="#">Cek Status Pengajuan Keberatan Informasi Publik</a>
+        </div>
+        <div class="box">
+          <i class="bi bi-bar-chart"></i>
+          <a href="#">Statistik Layanan Informasi Publik</a>
+        </div>
+        <div class="box">
+          <i class="bi bi-chat-dots"></i>
+          <a href="#">Kanal Pengaduan Resmi</a>
+        </div>
+      </div>
 
-      scrollLeftButton.addEventListener("click", () => {
-        scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
-      });
+      <div class="see-all">
+        <a href="#">Lihat Semua Layanan Informasi Publik</a>
+      </div>
+    </div>
 
-      scrollRightButton.addEventListener("click", () => {
-        scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
