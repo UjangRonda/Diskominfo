@@ -25,9 +25,6 @@
   <div class="fade-content">
     <?php include 'main/layanan-kami.html'; ?>
   </div>
-  <div class="fade-content">
-    <?php include 'main/Pusat-Informasi-Terpadu.html'; ?>
-  </div>
   <div class="">
     <?php include 'main/informasi-publik.html'; ?>
   </div>

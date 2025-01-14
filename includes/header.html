@@ -1,159 +1,84 @@
 <style>
-  #carousel1, #carousel2 {
-  position: relative;
-  height: 100vh; 
-  background-size: cover;
-  background-position: center;
-}
+  /* General Carousel Styling */
+  .carousel {
+    position: relative;
+    height: 75vh; /* Tinggi penuh layar */
+    overflow: hidden;
+  }
 
-#carousel1::after, #carousel2::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); 
-  z-index: 1; 
-}
+  .carousel-inner {
+    width: 100%;
+    height: 100%; /* Menjaga agar carousel tetap penuh */
+  }
 
-#carousel1 img, #carousel2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0; 
-}
+  .carousel-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Tinggi setiap item penuh */
+  }
 
+  .carousel-item img {
+    width: 100%; /* Memastikan gambar memenuhi lebar layar */
+    height: 100%; /* Memastikan gambar memenuhi tinggi layar */
+    object-fit: cover; /* Gambar tidak akan terdistorsi */
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .carousel-caption h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .carousel-caption p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
 </style>
-<header
-  class="header-bg text-center text-white position-relative"
-  style="height: 100vh; overflow: hidden;"
->
-  <!-- Carousel as Background -->
-  <div id="carouselIndicator" class="carousel slide position-absolute w-100 h-100" data-bs-ride="carousel">
+
+<header>
+  <!-- Carousel -->
+  <div id="fullCarousel" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-bs-target="#carouselIndicator" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#carouselIndicator" data-bs-slide-to="1"></li>
-      <li data-bs-target="#carouselIndicator" data-bs-slide-to="2"></li>
+      <li
+        data-bs-target="#fullCarousel"
+        data-bs-slide-to="0"
+        class="active"
+      ></li>
+      <li data-bs-target="#fullCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#fullCarousel" data-bs-slide-to="2"></li>
     </ol>
 
     <!-- Carousel Items -->
-    <div class="carousel-inner h-100">
+    <div class="carousel-inner">
       <!-- First Slide -->
       <div class="carousel-item active">
-        <div class="d-flex align-items-center justify-content-center h-100" id=carousel1>
-          <img
-          src="images/content_utama.png"
-          alt="Logo Solo: The Spirit of Java"
-          class="img-fluid"
-          style="width: 100%; height: 100vh; object-fit: cover; object-position: center;"
-        />
-        </div>
+        <img src="images/content_utama.png" alt="Slide 1" />
+        <div class="carousel-caption"></div>
       </div>
 
       <!-- Second Slide -->
       <div class="carousel-item">
-        <div class="d-flex align-items-center justify-content-center h-100" id="carousel2">
-          <img
-          src="images/intro (1).png"
-          alt="Logo Solo: The Spirit of Java"
-          class="img-fluid"
-          style="width: 100%; height: 100vh; object-fit: cover; object-position: center;"
-        />
-        </div>
+        <img src="images/intro (1).png" alt="Slide 2" />
+        <div class="carousel-caption"></div>
       </div>
 
       <!-- Third Slide -->
       <div class="carousel-item">
-        <div class="d-flex align-items-center justify-content-center h-100" id="carousel2">
-          <img
-          src="images/solo3.png"
-          alt="Logo Solo: The Spirit of Java"
-          class="img-fluid"
-          style="width: 100%; height: 100vh; object-fit: cover; object-position: center;"
-        />
-        </div>
+        <img src="images/solo3.png" alt="Slide 3" />
+        <div class="carousel-caption"></div>
       </div>
     </div>
-  </div>
-
-    </div>
-  </div>
-  
-
-  <!-- Stay-in-Front Section -->
-  <div class="stay-in-front position-relative w-100" style="z-index: 10">
-    <!-- Logo Section -->
-    <div class="logo-section mb-3">
-      <img
-        src="images/Solo The Spirit of Java.png"
-        alt="Logo Solo: The Spirit of Java"
-        class="img-fluid"
-        style="max-width: 400px; height: auto; padding-top: 60px ;"
-      />
-    </div>
-
-    <!-- Search Bar Section -->
-    <div class="search-bar mx-auto mb-5" style="max-width: 900px">
-      <form class="d-flex align-items-center" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Cari informasi tentang Solo"
-          aria-label="Search"
-          style="
-            border-radius: 50px;
-            padding: 15px 30px;
-            font-size: 1.3rem;
-            width: 100%;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-          "
-        />
-        <button type="submit" class="btn btn-primary rounded-circle">
-          <i class="bi bi-search"></i>
-        </button>
-      </form>
-    </div>
-     <!-- Button Section -->
-     <div class="row justify-content-center">
-      <!-- Profil Button -->
-      <div class="col-auto text-center">
-        <button class="circle-btn">
-          <img src="images/profil.png" alt="Profil Icon" class="circle-icon" />
-        </button>
-        <div class="circle-text">PROFIL</div>
-      </div>
-      <!-- Layanan Button -->
-      <div class="col-auto text-center">
-        <button class="circle-btn">
-          <img src="images/layanan.png" alt="Layanan Icon" class="circle-icon" />
-        </button>
-        <div class="circle-text">LAYANAN</div>
-      </div>
-      <!-- Link Dinas Button -->
-      <div class="col-auto text-center">
-        <button class="circle-btn">
-          <img src="images/link dinas.png" alt="Link Dinas Icon" class="circle-icon" />
-        </button>
-        <div class="circle-text">LINK DINAS</div>
-      </div>
-      <!-- Berita Button -->
-      <div class="col-auto text-center">
-        <button class="circle-btn">
-          <img src="images/berita.png" alt="Berita Icon" class="circle-icon" />
-        </button>
-        <div class="circle-text">BERITA</div>
-      </div>
-      <!-- Info Solo Button -->
-      <div class="col-auto text-center">
-        <button class="circle-btn">
-          <img src="images/info.png" alt="Info Solo Icon" class="circle-icon" />
-        </button>
-        <div class="circle-text">INFO SOLO</div>
-      </div>
-    </div>
-  </div>
   </div>
 </header>
