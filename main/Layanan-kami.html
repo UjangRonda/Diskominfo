@@ -19,19 +19,26 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 10px;
         text-align: center;
       }
 
       .header {
-        background-color: #003366;
         padding: 20px;
-        color: white;
+        text-align: center;
+        margin-bottom: 25px;
       }
 
-      .header-title {
-        margin-top: 10px;
-        font-size: 1.5em;
+      .header h1 {
+        font-size: 2em;
+        margin: 0;
+        color: #8b3e2f;
+      }
+
+      .header p {
+        font-size: 1.1em;
+        margin-top: 5px;
+        color: #b84e3a;
       }
 
       .grid {
@@ -40,29 +47,29 @@
       }
 
       .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        margin-bottom: 25px;
       }
 
       .grid-5 {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       }
 
       .box {
         background: linear-gradient(135deg, #8b3e2f, #b84e3a);
         color: white;
         padding: 20px;
-        border-radius: 8px;
+        border-radius: 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
+        transition: transform 0.3s, box-shadow 0.3s;
       }
 
       .box:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
 
@@ -70,8 +77,9 @@
         text-decoration: none;
         color: white;
         font-weight: bold;
-        font-size: 1em;
+        font-size: 0.95em;
         text-align: center;
+        margin-top: 10px;
       }
 
       .box a:hover {
@@ -80,11 +88,11 @@
 
       .box i {
         font-size: 2em;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
 
       .see-all {
-        margin-top: 40px;
+        margin-top: 25px;
         text-align: center;
       }
 
@@ -92,6 +100,7 @@
         color: #8b3e2f;
         font-weight: bold;
         text-decoration: none;
+        font-size: 1em;
       }
 
       .see-all a:hover {
@@ -101,6 +110,11 @@
   </head>
   <body>
     <div class="container">
+      <div class="header">
+        <h1>Layanan Informasi Publik</h1>
+        <p>Akses layanan publik dengan mudah dan cepat</p>
+      </div>
+
       <div class="grid grid-2">
         <div class="box">
           <i class="bi bi-file-earmark-text"></i>
