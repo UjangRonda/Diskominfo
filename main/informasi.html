@@ -1,6 +1,7 @@
 <style>
     #informasi-publik {
-        background-color: #f4f1eb; /* Warna coklat muda */
+        background-color: #f4f1eb;
+        /* Warna coklat muda */
         padding: 50px 0;
         text-align: center;
     }
@@ -9,7 +10,8 @@
         position: relative;
         display: inline-block;
         margin-bottom: 1.5rem;
-        color: #5a3d2e; /* Warna coklat tua */
+        color: #5a3d2e;
+        /* Warna coklat tua */
     }
 
     #informasi-publik h3::after {
@@ -17,7 +19,8 @@
         display: block;
         width: 100px;
         height: 4px;
-        background-color: #a55a42; /* Warna coklat keemasan */
+        background-color: #a55a42;
+        /* Warna coklat keemasan */
         margin: 10px auto 0;
         border-radius: 2px;
     }
@@ -35,6 +38,10 @@
     }
 
     #informasi-publik ul li {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
         width: 80%;
         background-color: #ffffff;
         padding: 20px;
@@ -42,20 +49,27 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #e3d1c1; /* Border coklat muda */
+        border: 1px solid #e3d1c1;
+        /* Border coklat muda */
+    }
+
+    #informasi-publik ul li img {
+        width: 10%;
     }
 
     #informasi-publik ul li:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        border: 1px solid #a55a42; /* Border saat hover */
+        border: 1px solid #a55a42;
+        /* Border saat hover */
     }
 
     #informasi-publik ul li a {
         text-decoration: none;
-        color: #5a3d2e; /* Warna coklat tua */
+        color: #5a3d2e;
+        /* Warna coklat tua */
         font-weight: bold;
-        font-size: 18px;
+        font-size: 36px;
         display: block;
     }
 
@@ -86,24 +100,30 @@
         <ul>
             <li>
                 <a href="#">Informasi Publik</a>
-                <p>Peraturan terbaru yang berlaku di kota atau daerah Anda.</p>
+                <p>Dokumen dan informasi terkait peraturan, kebijakan, serta layanan publik yang dapat diakses oleh
+                    masyarakat.</p>
             </li>
             <li>
                 <a href="#">Informasi Berkala</a>
-                <p>Menampilkan laporan keuangan yang transparan dan terperinci.</p>
+                <p>Laporan rutin yang mencakup data statistik, anggaran, serta informasi pemerintahan lainnya yang
+                    diperbarui secara berkala.</p>
             </li>
             <li>
                 <a href="#">Informasi Serta Merta</a>
-                <p>Informasi tentang anggaran pendapatan dan belanja daerah 2024.</p>
+                <p>Informasi yang disampaikan secara mendesak dan penting, seperti kebijakan darurat atau peraturan yang
+                    diterapkan dalam situasi tertentu.</p>
             </li>
             <li>
                 <a href="#">Informasi Setiap Saat</a>
-                <p>Menampilkan program-program kerja yang dijalankan oleh pemerintah.</p>
+                <p>Informasi yang dapat diakses setiap saat, seperti data anggaran, program pemerintah, dan kebijakan
+                    yang sedang berlangsung.</p>
             </li>
             <li>
                 <a href="#">Informasi Dikecualikan</a>
-                <p>Kebijakan-kebijakan yang diterapkan untuk kepentingan publik.</p>
+                <p>Informasi yang dikecualikan dari publikasi karena alasan tertentu, seperti data sensitif atau
+                    kebijakan tertentu yang tidak dapat dipublikasikan.</p>
             </li>
         </ul>
+
     </div>
 </section>

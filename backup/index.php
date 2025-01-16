@@ -16,35 +16,23 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animation.css" />
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
     body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    table,
-    td,
-    th {
-      font-family: 'Poppins', sans-serif !important;
-    }
-
-    #particles-js {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        table,
+        td,
+        th {
+            font-family: 'Poppins', sans-serif !important;
+        }
   </style>
 </head>
-
 <body>
-<div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 300000;"></div>
   <?php include 'includes/navbar.html'; ?>
   <?php include 'includes/header.html'; ?>
 
@@ -99,66 +87,7 @@
       });
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#A52A2A"
-        },
-        "shape": {
-          "type": "circle"
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false
-        },
-        "size": {
-          "value": 3,
-          "random": true
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#808080",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "repulse"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
-  <script src=" https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>
+
 
 </body>
 
