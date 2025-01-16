@@ -13,11 +13,18 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <style>
-    body {
-        font-family: "Poppins", sans-serif;
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0;
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    table,
+    td,
+    th {
+        font-family: 'Poppins', sans-serif !important;
     }
 
     section {
