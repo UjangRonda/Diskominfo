@@ -11,9 +11,19 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animation.css" />
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
+    body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        table,
+        td,
+        th {
+            font-family: 'Poppins', sans-serif !important;
+        }
 
     .galeri-section {
       background-image: url('images/bg lagi.png');
