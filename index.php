@@ -41,6 +41,9 @@
     <?php include 'main/layanan-kami.html'; ?>
   </div>
   <div class="fade-content">
+    <?php include 'main/informasi.html'; ?>
+  </div>
+  <div class="fade-content">
     <?php include 'main/penghargaan.html'; ?>
   </div>
   <div class="fade-content">
