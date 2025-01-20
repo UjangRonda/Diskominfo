@@ -88,6 +88,9 @@
             height: auto;
             margin-bottom: 20px;
         }
+        .form-container img{
+            width: 100%;
+        }
 
         .form-container input:focus,
         .form-container textarea:focus {
@@ -121,11 +124,13 @@
             object-fit: cover;
             display: block;
         }
-        .radio-container{
+
+        .radio-container {
             position: relative;
             flex-direction: row;
         }
-        .radio-container input{
+
+        .radio-container input {
             width: 5%;
         }
     </style>
@@ -156,7 +161,7 @@
                         <input type="radio" id="softcopy" name="softcopy"><label for="softcopy">Softcopy</label>
                         <input type="radio" id="hardcopy" name="hardcopy"><label for="hardcopy">Hardcopy</label>
                     </div>
-                    
+
                     <label for="rincian">Cara Mendapatkan Salinan Informasi</label>
                     <div class="radio-container">
                         <input type="radio" id="faksimili" name="faksimili"><label for="faksimili">Faksimili</label>
@@ -166,8 +171,9 @@
                 </form>
             </div>
             <div class="form-container sub">
+                <img src="images/idcard.png">
                 <form>
-
+                    <!-- <a href="https://www.freestock.com/free-icons/vector-illustration-grey-id-card-icon-567448390">Image used under license from Freestock.com</a> -->
                     <label for="nama">Nama Lengkap</label>
                     <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
 
