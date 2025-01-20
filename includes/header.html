@@ -81,8 +81,10 @@
         margin-bottom: 10px;
         color: white;
       }
-
-      .floating-box a {
+      a{
+        text-decoration: none !important;
+      }
+      .floating-box p {
         text-decoration: none;
         font-size: 1em;
         font-weight: bold;
@@ -170,6 +172,9 @@
         color: #b84e3a;
         text-decoration: underline;
       }
+      button{
+        border: none;
+      }
     </style>
   </head>
   <body>
@@ -182,14 +187,18 @@
     </header>
 
     <div class="floating-boxes">
-      <div class="floating-box">
-        <i class="bi bi-file-earmark-text"></i>
-        <a href="permohonan-informasi.php">Form Permohonan Informasi Publik</a>
-      </div>
-      <div class="floating-box">
-        <i class="bi bi-file-earmark-excel"></i>
-        <a href="permohonan-keberatan.php">Form Pengajuan Keberatan</a>
-      </div>
+      <a href="permohonan-informasi.php" class="button">
+        <div class="floating-box">
+          <i class="bi bi-file-earmark-text"></i>
+          <p> Permohonan Informasi Publik</p>
+        </div>
+      </a>
+      <a href="permohonan-keberatan.php" class="button">
+        <div class="floating-box">
+          <i class="bi bi-file-earmark-text"></i>
+          <p> Permohonan Informasi Publik</p>
+        </div>
+      </a>
     </div>
 
     <div class="container">
