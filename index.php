@@ -44,7 +44,7 @@
 </head>
 
 <body>
-<div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 300000;"></div>
+<div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 50%; z-index: 1000; pointer-events: none;"></div>
   <?php include 'includes/navbar.html'; ?>
   <?php include 'includes/header.html'; ?>
 
@@ -127,9 +127,9 @@
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#808080",
-          "opacity": 0.4,
-          "width": 1
+          "color": "#dbdbdb",
+          "opacity": 0.6,
+          "width": 2
         },
         "move": {
           "enable": true,
