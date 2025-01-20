@@ -50,10 +50,10 @@
 
   <!-- Main Content -->
   <div class="fade-content">
-    <?php include 'main/layanan-kami.html'; ?>
+    <?php include 'main/informasi.html'; ?>
   </div>
   <div class="fade-content">
-    <?php include 'main/informasi.html'; ?>
+    <?php include 'main/data.html'; ?>
   </div>
   <div class="fade-content">
     <?php include 'main/penghargaan.html'; ?>
