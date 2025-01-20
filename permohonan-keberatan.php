@@ -55,6 +55,7 @@
         }
 
         .content-wrapper {
+            gap: 2px;
             display: flex;
             flex-direction: row;
             background: white;
@@ -65,7 +66,6 @@
         }
 
         .form-container {
-            background: var(--bg-color);
             padding: 30px;
         }
 
@@ -102,16 +102,30 @@
         .form-container button:hover {
             background-color: var(--secondary-color);
         }
+
+        .img-container {
+            height: 500px;
+            width: 900px;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-<?php include 'includes/navbar.html'; ?>
+    <?php include 'includes/navbar.html'; ?>
     <section class="main-content" style="margin-top: 100px;">
-        <div class="title-data">
-            <h1>Form Permohonan Keberatan</h1>
-        </div>
+
         <div class="content-wrapper">
+            <div class="img-container">
+                <img src="images/pengajuan.jpg">
+            </div>
             <div class="form-container">
                 <form>
                     <label for="nama">Kode Permohonan</label>
@@ -123,13 +137,8 @@
                     <button type="submit">Kirim Permohonan</button>
                 </form>
             </div>
-            <div>
-                <img src="images/pengajuan.jpg">
-            </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <?php include 'includes/footer.html'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
