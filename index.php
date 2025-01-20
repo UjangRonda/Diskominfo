@@ -61,6 +61,9 @@
   <div class="fade-content">
     <?php include 'main/berita.html'; ?>
   </div>
+  <div class="fade-content">
+    <?php include 'main/website.html'; ?>
+  </div>
 
   <?php include 'includes/footer.html'; ?>
 

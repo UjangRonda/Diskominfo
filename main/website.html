@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section Kecamatan</title>
+    <style>
+      .section {
+        text-align: center;
+        padding: 50px 20px;
+      }
+      .section h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+      }
+      .section .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section .box {
+        background: linear-gradient(135deg, #8b3e2f, #b84e3a);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+      .section .box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      .section .box h2 {
+        font-size: 1.5em;
+        margin: 0;
+      }
+      .section .button {
+        margin-top: 30px;
+      }
+      .section .button a {
+        display: inline-block;
+        background-color: #8b3e2f;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+      }
+      .section .button a:hover {
+        background-color: #b84e3a;
+      }
+      /* Animation for hover */
+      .section .box {
+        position: relative;
+        overflow: hidden;
+      }
+      .section .box::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.1);
+        transform: rotate(45deg);
+        transition: top 0.3s ease;
+      }
+      .section .box:hover::before {
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <h1>Website Perangkat Daerah</h1>
+      <div class="grid">
+        <div
+          class="box"
+          onclick="window.location.href='https://example.com/laweyan';"
+        >
+          <h2>Kecamatan Laweyan</h2>
+        </div>
+        <div
+          class="box"
+          onclick="window.location.href='https://example.com/serengan';"
+        >
+          <h2>Kecamatan Serengan</h2>
+        </div>
+        <div
+          class="box"
+          onclick="window.location.href='https://example.com/pasarkliwon';"
+        >
+          <h2>Kecamatan Pasar Kliwon</h2>
+        </div>
+        <div
+          class="box"
+          onclick="window.location.href='https://example.com/jebres';"
+        >
+          <h2>Kecamatan Jebres</h2>
+        </div>
+        <div
+          class="box"
+          onclick="window.location.href='https://example.com/banjarsari';"
+        >
+          <h2>Kecamatan Banjarsari</h2>
+        </div>
+      </div>
+      <div class="button">
+        <a href="https://example.com/semua">Lihat Semua</a>
+      </div>
+    </section>
+  </body>
+</html>
