@@ -23,7 +23,7 @@
 
       .special-section {
         background: linear-gradient(135deg, #8b3e2f, #b84e3a);
-        padding: 20px;
+        padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         margin: 20px;
@@ -41,34 +41,16 @@
         }
       }
 
-      .header h1 {
-        font-size: 32px;
-        font-weight: 600;
-        color: #fff;
-        margin-bottom: 10px;
+      .section-title {
         text-align: center;
-        animation: fadeIn 1.2s ease-in-out;
-      }
-
-      .see-more {
-        text-align: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-
-      .see-more a {
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 600;
+        margin-bottom: 20px;
         color: #fff;
-        background-color: #8b3e2f;
-        padding: 5px 10px;
-        border-radius: 5px;
-        transition: background-color 0.2s ease-in-out;
       }
 
-      .see-more a:hover {
-        background-color: #b84e3a;
+      .section-title img {
+        max-width: 180px;
+        margin: 0 auto;
+        animation: fadeIn 1.3s ease-in-out;
       }
 
       .grid {
@@ -85,7 +67,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.2s, box-shadow 0.2s;
-        animation: fadeIn 1.5s ease-in-out;
+        animation: fadeInCard 0.8s ease-in-out;
       }
 
       .card:hover {
@@ -94,9 +76,26 @@
       }
 
       .card i {
-        font-size: 30px;
+        font-size: 50px;
         color: #b84e3a;
         margin-bottom: 10px;
+        animation: bounce 1.5s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
       }
 
       .card h3 {
@@ -125,14 +124,33 @@
       .badge.dataset {
         background-color: #8b3e2f;
       }
+
+      .see-more {
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .see-more a {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #8b3e2f;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .see-more a:hover {
+        background-color: #b84e3a;
+      }
     </style>
   </head>
   <body>
     <section class="special-section">
-      <div class="header">
-        <h1>Open Data Surakarta</h1>
+      <div class="section-title">
+        <img src="images/Data.png" alt="Explore Data" />
       </div>
-
       <div class="grid">
         <div class="card">
           <i class="bi bi-bar-chart"></i>
@@ -177,15 +195,6 @@
             <span class="badge dataset">Dataset</span>
           </div>
           <h3>Persentase Pelaku Usaha...</h3>
-        </div>
-
-        <div class="card">
-          <i class="bi bi-pie-chart"></i>
-          <div class="badge-container">
-            <span class="badge">Open Data</span>
-            <span class="badge dataset">Dataset</span>
-          </div>
-          <h3>Nilai Komponen Pengendalian...</h3>
         </div>
       </div>
 
