@@ -55,6 +55,7 @@
         }
 
         .content-wrapper {
+            gap: 2px;
             display: flex;
             flex-direction: row;
             background: white;
@@ -65,8 +66,12 @@
         }
 
         .form-container {
-            background: var(--bg-color);
+            flex: 2;
             padding: 30px;
+        }
+
+        .sub {
+            flex: 1;
         }
 
         .form-container label {
@@ -80,6 +85,7 @@
             border: 2px solid var(--primary-color);
             padding: 10px;
             width: 100%;
+            height: auto;
             margin-bottom: 20px;
         }
 
@@ -102,34 +108,82 @@
         .form-container button:hover {
             background-color: var(--secondary-color);
         }
+
+        .img-container {
+            height: 500px;
+            width: 900px;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .radio-container{
+            position: relative;
+            flex-direction: row;
+        }
+        .radio-container input{
+            width: 5%;
+        }
     </style>
 </head>
 
 <body>
-<?php include 'includes/navbar.html'; ?>
+    <?php include 'includes/navbar.html'; ?>
     <section class="main-content" style="margin-top: 100px;">
-        <div class="title-data">
-            <h1>Form Permohonan Keberatan</h1>
-        </div>
+
         <div class="content-wrapper">
             <div class="form-container">
                 <form>
-                    <label for="nama">Kode Permohonan</label>
-                    <input type="text" id="kode" name="kode" placeholder="Masukkan kode permohonan" required>
 
-                    <label for="email">NIK</label>
+                    <label for="nik">NIK</label>
                     <input type="number" id="nik" name="nik" placeholder="Masukkan NIK anda" required>
 
+                    <label for="kategori">Kategori Permohonan</label>
+                    <input type="text" id="kategori" name="kategori" placeholder="Pilih Kategori Permohonan" required>
+
+                    <label for="tujuan">Tujuan Penggunaan Informasi</label>
+                    <textarea id="tujuan" name="tujuan" placeholder="Sebutkan Tujuan Penggunaan Informasi" required></textarea>
+
+                    <label for="rincian">Rincian Informasi</label>
+                    <textarea id="rincian" name="rincian" placeholder="Rincian Informasi" required></textarea>
+
+                    <label for="rincian">Salinan Informasi</label>
+                    <div class="radio-container">
+                        <input type="radio" id="softcopy" name="softcopy"><label for="softcopy">Softcopy</label>
+                        <input type="radio" id="hardcopy" name="hardcopy"><label for="hardcopy">Hardcopy</label>
+                    </div>
+                    
+                    <label for="rincian">Cara Mendapatkan Salinan Informasi</label>
+                    <div class="radio-container">
+                        <input type="radio" id="faksimili" name="faksimili"><label for="faksimili">Faksimili</label>
+                        <input type="radio" id="langsung" name="langsung"><label for="langsung">Mengambil Langsung</label>
+                        <input type="radio" id="takeemail" name="takeemail"><label for="takeemail">E-mail</label>
+                    </div>
+                </form>
+            </div>
+            <div class="form-container sub">
+                <form>
+
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
+
+                    <label for="alamat">Alamat</label>
+                    <textarea placeholder="Masukkan Alamat Anda"></textarea>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan Email anda" required>
+
+                    <label for="nomor">Nomor Telepon</label>
+                    <input type="number" id="nomor" name="telp" placeholder="Masukkan Nomor Telepon anda" required>
                     <button type="submit">Kirim Permohonan</button>
                 </form>
             </div>
-            <div>
-                <img src="images/pengajuan.jpg">
-            </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <?php include 'includes/footer.html'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
