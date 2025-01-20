@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animation.css" />
   <style>
+        body, h1, h2, h3, h4, h5, h6, p, table, td, th {
+      font-family: 'Poppins', sans-serif !important;
+    }
     .berita-container .card1 {
       border: none;
       box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
