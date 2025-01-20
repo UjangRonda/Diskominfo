@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/animations.css" />
   <style>
     body, h1, h2, h3, h4, h5, h6, p, table, td, th {
       font-family: 'Poppins', sans-serif !important;
