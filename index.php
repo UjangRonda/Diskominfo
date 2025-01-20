@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/animations.css" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
     body,

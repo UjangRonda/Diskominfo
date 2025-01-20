@@ -247,6 +247,7 @@ html {
       opacity: 1;
   }
 }
+
 .title-data {
   animation: fadeIn 0.8s ease-out;
 }
@@ -311,4 +312,7 @@ html {
       transform: scale(1);
       opacity: 1; 
   }
+}
+.floating-box{
+  animation: popIn 0.9s;
 }
