@@ -143,6 +143,7 @@
             margin: 0 auto;
             border-radius: 12px;
             max-width: 1200px;
+            animation: fadeIn 0.8s ease-out;
         }
 
         .prosedur-text ul li::before {

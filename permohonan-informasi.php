@@ -97,6 +97,8 @@
             margin: 0 auto;
             border-radius: 12px;
             max-width: 1200px;
+            animation: fadeIn 0.8s ease-out;
+
         }
 
         .content-wrapper {

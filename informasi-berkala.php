@@ -110,15 +110,28 @@
                 grid-template-columns: 1fr;
             }
         }
+        header {
+            background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
+                url("images/bg3.png") center/cover no-repeat;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 12px;
+            max-width: 1200px;
+            animation: fadeIn 0.8s ease-out;
+        }
     </style>
 </head>
 
 <body>
     <?php include 'includes/navbar.html'; ?>
     <section class="main-content" style="margin-top: 100px;">
-        <div class="title-data">
+        <header>
             <h1>Katalog Informasi Berkala</h1>
-        </div>
+    </header>
         <div class="catalog-container">
 
             <div class="catalog-section">
