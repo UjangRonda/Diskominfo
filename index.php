@@ -96,7 +96,7 @@
     }
 
     .footer-animate {
-      animation: slideInFadeUp 0.8s ease forwards;
+      animation: slideInFadeUp 1.2s ease forwards;
     }
 
     .informasi-animate {
