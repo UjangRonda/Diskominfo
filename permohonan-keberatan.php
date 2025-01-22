@@ -53,6 +53,18 @@
             margin: 0;
             padding: 0 20px;
         }
+        header {
+            background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
+                url("images/bg3.png") center/cover no-repeat;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 12px;
+            max-width: 1200px;
+        }
 
         .content-wrapper {
             gap: 2px;
@@ -121,7 +133,9 @@
 <body>
     <?php include 'includes/navbar.html'; ?>
     <section class="main-content" style="margin-top: 100px;">
-
+        <header>
+            <h1>Form Permohonan Keberatan</h1>
+        </header>
         <div class="content-wrapper">
             <div class="img-container">
                 <img src="images/pengajuan.jpg">

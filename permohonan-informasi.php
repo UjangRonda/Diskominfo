@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Permohonan Keberatan</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        span {
-            color: wheat;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        table,
+        td,
+        th {
+            font-family: 'Poppins', sans-serif !important;
         }
+
         .image-container {
             position: relative;
             display: inline-block;
@@ -52,10 +62,10 @@
         }
 
         :root {
-            --primary-color: #8B4513;
-            --secondary-color: #D2691E;
-            --bg-color: #FFF8DC;
-            --text-color: #5D4037;
+            --primary-color: #8b3e2f;
+            --secondary-color: #b84e3a;
+            --bg-color: #f5f5f5;
+            --text-color: #333;
         }
 
         body,
@@ -72,41 +82,34 @@
             font-family: 'Poppins', sans-serif !important;
         }
 
-        h1 {
-            font-weight: bold
+        .page-content {
+            margin-top: 110px;
         }
 
-        .title-data {
-            padding: 40px 20px;
-            background: linear-gradient(rgba(139, 69, 19, 0.9), rgba(139, 69, 19, 0.7)), url('images/bg\ lagi.png');
-            background-size: cover;
-            background-position: center;
+        header {
+            background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
+                url("images/bg3.png") center/cover no-repeat;
             color: white;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 30px;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .title-data h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            margin: 0;
-            padding: 0 20px;
-        }
-
-        form {
-            display: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 12px;
+            max-width: 1200px;
         }
 
         .content-wrapper {
-            gap: 2px;
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 25px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            margin: 0 20px 40px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        form{
+            display: flex;
         }
 
         .form-container {
@@ -121,71 +124,73 @@
         .form-container label {
             color: var(--text-color);
             font-weight: 600;
+            margin-bottom: 8px;
         }
 
         .form-container input,
         .form-container textarea {
-            border-radius: 6px;
+            border-radius: 8px;
             border: 2px solid var(--primary-color);
             padding: 10px;
             width: 100%;
-            height: auto;
             margin-bottom: 20px;
-        }
-
-        .form-container img {
-            width: 100%;
+            background: #f9f3f1;
         }
 
         .form-container input:focus,
         .form-container textarea:focus {
             outline: none;
-            box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+            box-shadow: 0 0 0 2px rgba(139, 62, 47, 0.2);
+            background: #f5e4e1;
         }
 
         .form-container button {
             background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             padding: 12px 20px;
             font-weight: 600;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .form-container button:hover {
             background-color: var(--secondary-color);
-        }
-
-        .img-container {
-            height: 500px;
-            width: 900px;
-            overflow: hidden;
-        }
-
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+            transform: scale(1.05);
         }
 
         .radio-container {
-            position: relative;
-            flex-direction: row;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
         .radio-container input {
-            width: 5%;
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .radio-container label {
+            margin-bottom: 0;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <?php include 'includes/navbar.html'; ?>
-    <section class="main-content" style="margin-top: 100px;">
-        <div class="content-wrapper">
+    <div class="page-content">
+        <header>
             <h1>Form Permohonan Informasi</h1>
+        </header>
+        <div class="content-wrapper">
             <form>
                 <div class="form-container">
                     <label for="nik">NIK</label>
@@ -200,17 +205,17 @@
                     <label for="rincian">Rincian Informasi</label>
                     <textarea id="rincian" name="rincian" placeholder="Rincian Informasi" required></textarea>
 
-                    <label for="rincian">Salinan Informasi</label>
+                    <label>Salinan Informasi</label>
                     <div class="radio-container">
-                        <input type="radio" id="softcopy" name="softcopy"><label for="softcopy">Softcopy</label>
-                        <input type="radio" id="hardcopy" name="hardcopy"><label for="hardcopy">Hardcopy</label>
+                        <div><input type="radio" id="softcopy" name="salinan"><label for="softcopy">Softcopy</label></div>
+                        <div><input type="radio" id="hardcopy" name="salinan"><label for="hardcopy">Hardcopy</label></div>
                     </div>
 
-                    <label for="rincian">Cara Mendapatkan Salinan Informasi</label>
+                    <label>Cara Mendapatkan Salinan Informasi</label>
                     <div class="radio-container">
-                        <input type="radio" id="faksimili" name="faksimili"><label for="faksimili">Faksimili</label>
-                        <input type="radio" id="langsung" name="langsung"><label for="langsung">Mengambil Langsung</label>
-                        <input type="radio" id="takeemail" name="takeemail"><label for="takeemail">E-mail</label>
+                        <div><input type="radio" id="faksimili" name="cara"><label for="faksimili">Faksimili</label></div>
+                        <div><input type="radio" id="langsung" name="cara"><label for="langsung">Mengambil Langsung</label></div>
+                        <div><input type="radio" id="takeemail" name="cara"><label for="takeemail">E-mail</label></div>
                     </div>
                 </div>
                 <div class="form-container sub">
@@ -221,12 +226,11 @@
                             <input type="file" accept="image/*">
                         </label>
                     </div>
-                    <!-- <a href="https://www.freestock.com/free-icons/vector-illustration-grey-id-card-icon-567448390">Image used under license from Freestock.com</a> -->
                     <label for="nama">Nama Lengkap</label>
                     <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
 
                     <label for="alamat">Alamat</label>
-                    <textarea placeholder="Masukkan Alamat Anda"></textarea>
+                    <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat Anda"></textarea>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Masukkan Email anda" required>
@@ -237,7 +241,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -13,7 +13,6 @@
 </head>
 <style>
   body,
-  h1,
   h2,
   h3,
   h4,
@@ -25,45 +24,56 @@
   th {
     font-family: 'Poppins', sans-serif !important;
   }
+  h1{
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 28px !important;
+  }
+
+  :root {
+    --primary-color: #8b3e2f;
+    --secondary-color: #b84e3a;
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+  }
 
   section {
-    margin-top: 60px;
+    margin-top: 110px;
     padding: 50px 0;
   }
 
   .section-title-layout {
-    background-size: cover;
-    background-image: url('images/bg lagi.png');
+    background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
+      url("images/bg3.png") center/cover no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 12px;
+    max-width: 1200px;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 20vh;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .section-title {
     color: white;
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     text-align: center;
   }
 
   .section-content {
-    padding: 30px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  .section-content p {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 15px;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+    max-width: 1200px;
   }
 
   .prosedur {
@@ -77,11 +87,11 @@
 
   .prosedur-img {
     flex: 0 0 auto;
-    max-width: 100vw;
+    max-width: 50vw;
   }
 
   .prosedur-img img {
-    width: 60%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -100,7 +110,7 @@
   .prosedur-text h1 {
     font-size: 30px;
     font-weight: bold;
-    color: #a55a42;
+    color: var(--primary-color);
     margin-bottom: 20px;
   }
 
@@ -117,20 +127,20 @@
 
   .prosedur-text ul li::before {
     content: "•";
-    color: #a55a42;
+    color: var(--primary-color);
     font-weight: bold;
     position: absolute;
     left: 0;
   }
 
   .prosedur-text a {
-    color: #a55a42;
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   .prosedur-text a:hover {
-    color: #8b452f;
+    color: var(--secondary-color);
     text-decoration: underline;
   }
 
@@ -168,6 +178,18 @@
       margin: 0 auto;
     }
   }
+  header {
+            background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
+                url("images/bg3.png") center/cover no-repeat;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 12px;
+            max-width: 1200px;
+        }
 </style>
 
 <body>
@@ -176,9 +198,9 @@
   <!-- Main Content -->
   <section>
     <div class="container-fluid">
-      <div class="section-title-layout">
-        <h1 class="section-title">Upaya atas Tidak Ditanggapinya Jawaban Keberatan terhadap Permohonan Informasi Publik</h1>
-      </div>
+      <header>
+        <h1> Upaya atas Tidak Ditanggapinya Jawaban Keberatan terhadap Permohonan Informasi Publik</h1>
+      </header>
       <div class="column">
         <div class="row">
           <div class="col-12">
