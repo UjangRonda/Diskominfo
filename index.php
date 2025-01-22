@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/keyframe.css" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
     body,
@@ -49,7 +49,7 @@
   <?php include 'includes/header.html'; ?>
 
   <!-- Main Content -->
-  <div class="fade-content">
+  <div class="pop-content">
     <?php include 'main/informasi.html'; ?>
   </div>
   <div class="fade-content">
@@ -89,14 +89,6 @@
             } else if (element.classList.contains('pop-content')) {
               element.classList.add('pop-in');
             }
-          }
-        });
-
-        contentElements.forEach((element) => {
-          if (element.classList.contains('pop-content') && isInViewport(element)) {
-            document.querySelectorAll('.pop-content').forEach((popElement) => {
-              popElement.classList.add('pop-in');
-            });
           }
         });
       });
