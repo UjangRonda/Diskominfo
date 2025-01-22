@@ -1,28 +1,42 @@
 <style>
+  /* Gaya Umum untuk Semua Title */
+  .section-title {
+    text-align: center;
+    font-size: 28px; /* Ukuran font seragam */
+    font-weight: bold;
+    color: #8b3e2f; /* Warna sesuai patokan */
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px; /* Jarak bawah seragam */
+    position: relative;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: #8b3e2f; /* Warna garis bawah */
+    margin: 15px auto;
+  }
+
+  /* Gaya Khusus untuk Penghargaan */
   .penghargaan {
     text-align: center;
     background-color: #f7f7f7;
     color: #333;
   }
 
-  .penghargaan h2 {
-    margin-bottom: 20px; /* Sesuaikan jarak bawah heading */
-    font-family: "Poppins", sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: #8b3e2f;
-  }
-
   .penghargaan .card {
     border: none;
-    background-color: #8b3e2f;
+    background: linear-gradient(rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.8)),
+      url("images/bg.png") center/cover no-repeat;
     color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px auto; /* Kurangi jarak antar card */
+    margin: 10px auto;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    min-height: 320px; /* Sesuaikan tinggi minimum card */
+    min-height: 320px;
   }
 
   .penghargaan .card:hover {
@@ -31,14 +45,14 @@
   }
 
   .penghargaan .card img {
-    height: 160px; /* Sesuaikan tinggi gambar */
+    height: 160px;
     object-fit: contain;
     margin-bottom: 10px;
   }
 
   .penghargaan .card p {
-    padding: 5px; /* Kurangi padding teks */
-    font-size: 0.9em; /* Sedikit kecilkan ukuran font */
+    padding: 5px;
+    font-size: 0.9em;
     font-weight: 500;
     line-height: 1.4;
     text-align: center;
@@ -62,14 +76,6 @@
     z-index: 10;
   }
 
-  .carousel-control-prev {
-    left: -40px;
-  }
-
-  .carousel-control-next {
-    right: -40px;
-  }
-
   .carousel-control-prev:hover,
   .carousel-control-next:hover {
     background-color: #b84e3a;
@@ -78,7 +84,7 @@
 
 <section>
   <div class="penghargaan">
-    <h2>Penghargaan PPID Kota Surakarta</h2>
+    <h2 class="section-title">Penghargaan PPID Kota Surakarta</h2>
     <div class="container">
       <div
         id="penghargaanCarousel"

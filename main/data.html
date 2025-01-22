@@ -21,16 +21,21 @@
         padding: 0;
       }
 
-      .special-section {
-        background: linear-gradient(135deg, #8b3e2f, #b84e3a);
+      .special-section-data {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 62, 47, 0.9),
+            rgba(184, 78, 58, 0.9)
+          ),
+          url("images/bg2.png") center/cover no-repeat;
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         margin: 20px;
-        animation: fadeIn 1s ease-in-out;
+        animation: fadeIn-data 1s ease-in-out;
       }
 
-      @keyframes fadeIn {
+      @keyframes fadeIn-data {
         from {
           opacity: 0;
           transform: translateY(20px);
@@ -41,25 +46,24 @@
         }
       }
 
-      .section-title {
+      .section-title-data {
         text-align: center;
         margin-bottom: 20px;
-        color: #fff;
       }
 
-      .section-title img {
+      .section-title-data img {
         max-width: 180px;
         margin: 0 auto;
-        animation: fadeIn 1.3s ease-in-out;
+        animation: fadeIn-data 1.3s ease-in-out;
       }
 
-      .grid {
+      .grid-data {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
       }
 
-      .card {
+      .card-data {
         background-color: #fff;
         color: #333;
         border-radius: 8px;
@@ -67,22 +71,22 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.2s, box-shadow 0.2s;
-        animation: fadeInCard 0.8s ease-in-out;
+        animation: fadeInCard-data 0.8s ease-in-out;
       }
 
-      .card:hover {
+      .card-data:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
       }
 
-      .card i {
+      .card-data i {
         font-size: 50px;
         color: #b84e3a;
         margin-bottom: 10px;
-        animation: bounce 1.5s infinite;
+        animation: bounce-data 1.5s infinite;
       }
 
-      @keyframes bounce {
+      @keyframes bounce-data {
         0%,
         20%,
         50%,
@@ -98,21 +102,21 @@
         }
       }
 
-      .card h3 {
+      .card-data h3 {
         font-size: 14px;
         font-weight: 600;
         margin: 10px 0 0;
         color: #333;
       }
 
-      .badge-container {
+      .badge-container-data {
         display: flex;
         justify-content: center;
         gap: 5px;
         margin-bottom: 10px;
       }
 
-      .badge {
+      .badge-data {
         background-color: #b84e3a;
         color: #fff;
         font-size: 10px;
@@ -121,16 +125,16 @@
         font-weight: 500;
       }
 
-      .badge.dataset {
+      .badge-dataset-data {
         background-color: #8b3e2f;
       }
 
-      .see-more {
+      .see-more-data {
         text-align: center;
         margin-top: 15px;
       }
 
-      .see-more a {
+      .see-more-data a {
         text-decoration: none;
         font-size: 14px;
         font-weight: 600;
@@ -141,64 +145,64 @@
         transition: background-color 0.2s ease-in-out;
       }
 
-      .see-more a:hover {
+      .see-more-data a:hover {
         background-color: #b84e3a;
       }
     </style>
   </head>
   <body>
-    <section class="special-section">
-      <div class="section-title">
+    <section class="special-section-data">
+      <div class="section-title-data">
         <img src="images/Data.png" alt="Explore Data" />
       </div>
-      <div class="grid">
-        <div class="card">
+      <div class="grid-data">
+        <div class="card-data">
           <i class="bi bi-bar-chart"></i>
-          <div class="badge-container">
-            <span class="badge">Open Data</span>
-            <span class="badge dataset">Dataset</span>
+          <div class="badge-container-data">
+            <span class="badge-data">Open Data</span>
+            <span class="badge-dataset-data">Dataset</span>
           </div>
           <h3>Nilai Ketertarikan Masyarakat...</h3>
         </div>
 
-        <div class="card">
+        <div class="card-data">
           <i class="bi bi-person-lines-fill"></i>
-          <div class="badge-container">
-            <span class="badge">Open Data</span>
-            <span class="badge dataset">Dataset</span>
+          <div class="badge-container-data">
+            <span class="badge-data">Open Data</span>
+            <span class="badge-dataset-data">Dataset</span>
           </div>
           <h3>Data Korban Kekerasan...</h3>
         </div>
 
-        <div class="card">
+        <div class="card-data">
           <i class="bi bi-graph-up"></i>
-          <div class="badge-container">
-            <span class="badge">Open Data</span>
-            <span class="badge dataset">Dataset</span>
+          <div class="badge-container-data">
+            <span class="badge-data">Open Data</span>
+            <span class="badge-dataset-data">Dataset</span>
           </div>
           <h3>Data Cakupan Peserta Usaha...</h3>
         </div>
 
-        <div class="card">
+        <div class="card-data">
           <i class="bi bi-cash"></i>
-          <div class="badge-container">
-            <span class="badge">Open Data</span>
-            <span class="badge dataset">Dataset</span>
+          <div class="badge-container-data">
+            <span class="badge-data">Open Data</span>
+            <span class="badge-dataset-data">Dataset</span>
           </div>
           <h3>Persentase Kenaikan Omset...</h3>
         </div>
 
-        <div class="card">
+        <div class="card-data">
           <i class="bi bi-building"></i>
-          <div class="badge-container">
-            <span class="badge">Open Data</span>
-            <span class="badge dataset">Dataset</span>
+          <div class="badge-container-data">
+            <span class="badge-data">Open Data</span>
+            <span class="badge-dataset-data">Dataset</span>
           </div>
           <h3>Persentase Pelaku Usaha...</h3>
         </div>
       </div>
 
-      <div class="see-more">
+      <div class="see-more-data">
         <a href="#">Lihat Selengkapnya</a>
       </div>
     </section>
