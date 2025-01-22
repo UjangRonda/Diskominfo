@@ -53,6 +53,17 @@
         transform: translateY(0);
       }
     }
+    @keyframes slideInFadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     @keyframes fadeInScale {
       0% {
@@ -77,11 +88,11 @@
     }
 
     .navbar-animate {
-      animation: fadeInScale 0.6s ease forwards;
+      animation: slideInFadeDown 0.4s ease forwards;
     }
 
     .header-animate {
-      animation: slideInFadeUp 0.8s ease forwards;
+      animation: slideInFadeDown 0.8s ease forwards;
     }
 
     .footer-animate {
