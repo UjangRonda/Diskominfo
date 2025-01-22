@@ -40,28 +40,100 @@
       height: 100%;
       z-index: -1;
     }
+
+    /* Keyframe animations */
+    @keyframes slideInFadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-content {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .animate-content.visible {
+      animation: slideInFadeUp 0.8s ease forwards;
+      visibility: visible;
+    }
+
+    .navbar-animate {
+      animation: fadeInScale 0.6s ease forwards;
+    }
+
+    .header-animate {
+      animation: slideInFadeUp 0.8s ease forwards;
+    }
+
+    .footer-animate {
+      animation: slideInFadeUp 0.8s ease forwards;
+    }
+
+    .informasi-animate {
+      animation-delay: 0.2s;
+    }
+
+    .data-animate {
+      animation-delay: 0.3s;
+    }
+
+    .penghargaan-animate {
+      animation-delay: 0.4s;
+    }
+
+    .berita-animate {
+      animation-delay: 0.5s;
+    }
+
+    .website-animate {
+      animation-delay: 0.6s;
+    }
   </style>
 </head>
 
 <body>
-<div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 50%; z-index: 1000; pointer-events: none;"></div>
+  <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 50%; z-index: 1000; pointer-events: none;"></div>
+ 
   <?php include 'includes/navbar.html'; ?>
+
   <?php include 'includes/header.html'; ?>
 
-  <!-- Main Content -->
-  <div class="pop-content">
+  <div class="animate-content informasi-animate">
     <?php include 'main/informasi.html'; ?>
   </div>
-  <div class="fade-content">
+
+  <div class="animate-content data-animate">
     <?php include 'main/data.html'; ?>
   </div>
-  <div class="fade-content">
+
+  <div class="animate-content penghargaan-animate">
     <?php include 'main/penghargaan.html'; ?>
   </div>
-  <div class="fade-content">
+
+  <div class="animate-content berita-animate">
     <?php include 'main/berita.html'; ?>
   </div>
-  <div class="fade-content">
+
+  <div class="animate-content website-animate">
     <?php include 'main/website.html'; ?>
   </div>
 
@@ -69,28 +141,30 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-
-      return (rect.top < viewportHeight * 0.6 && rect.bottom > viewportHeight * 0.5);
-
-    }
-
     document.addEventListener("DOMContentLoaded", function() {
-      const contentElements = document.querySelectorAll('.fade-content, .pop-content');
-      const groupElements = document.querySelectorAll('.groupInfo');
+      const navbar = document.querySelector('nav');
+      const header = document.querySelector('header');
+      const footer = document.querySelector('footer');
+      const sections = document.querySelectorAll('.animate-content');
 
-      window.addEventListener('scroll', function() {
-        contentElements.forEach((element) => {
-          if (isInViewport(element)) {
-            if (element.classList.contains('fade-content')) {
-              element.classList.add('fade-in');
-            } else if (element.classList.contains('pop-content')) {
-              element.classList.add('pop-in');
-            }
+      if (navbar) navbar.classList.add('navbar-animate');
+      if (header) header.classList.add('header-animate');
+      if (footer) footer.classList.add('footer-animate');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
           }
         });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      });
+
+      sections.forEach(section => {
+        observer.observe(section);
       });
     });
   </script>
