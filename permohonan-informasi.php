@@ -13,6 +13,44 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <style>
+        span {
+            color: wheat;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            display: block;
+            width: 300px;
+        }
+
+        .upload-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+
+        .image-container:hover .upload-overlay {
+            opacity: 1;
+        }
+
+        .upload-overlay input[type="file"] {
+            display: none;
+        }
+
         :root {
             --primary-color: #8B4513;
             --secondary-color: #D2691E;
@@ -32,6 +70,10 @@
         td,
         th {
             font-family: 'Poppins', sans-serif !important;
+        }
+
+        h1 {
+            font-weight: bold
         }
 
         .title-data {
@@ -54,10 +96,12 @@
             padding: 0 20px;
         }
 
+        form {
+            display: flex;
+        }
+
         .content-wrapper {
             gap: 2px;
-            display: flex;
-            flex-direction: row;
             background: white;
             border-radius: 15px;
             padding: 25px;
@@ -88,7 +132,8 @@
             height: auto;
             margin-bottom: 20px;
         }
-        .form-container img{
+
+        .form-container img {
             width: 100%;
         }
 
@@ -139,11 +184,10 @@
 <body>
     <?php include 'includes/navbar.html'; ?>
     <section class="main-content" style="margin-top: 100px;">
-
         <div class="content-wrapper">
-            <div class="form-container">
-                <form>
-
+            <h1>Form Permohonan Informasi</h1>
+            <form>
+                <div class="form-container">
                     <label for="nik">NIK</label>
                     <input type="number" id="nik" name="nik" placeholder="Masukkan NIK anda" required>
 
@@ -168,11 +212,15 @@
                         <input type="radio" id="langsung" name="langsung"><label for="langsung">Mengambil Langsung</label>
                         <input type="radio" id="takeemail" name="takeemail"><label for="takeemail">E-mail</label>
                     </div>
-                </form>
-            </div>
-            <div class="form-container sub">
-                <img src="images/idcard.png">
-                <form>
+                </div>
+                <div class="form-container sub">
+                    <div class="image-container">
+                        <img src="images/idcard.png" alt="ID Card">
+                        <label class="upload-overlay">
+                            <span>Upload KTP Disini</span>
+                            <input type="file" accept="image/*">
+                        </label>
+                    </div>
                     <!-- <a href="https://www.freestock.com/free-icons/vector-illustration-grey-id-card-icon-567448390">Image used under license from Freestock.com</a> -->
                     <label for="nama">Nama Lengkap</label>
                     <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
@@ -186,8 +234,8 @@
                     <label for="nomor">Nomor Telepon</label>
                     <input type="number" id="nomor" name="telp" placeholder="Masukkan Nomor Telepon anda" required>
                     <button type="submit">Kirim Permohonan</button>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
