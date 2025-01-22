@@ -34,7 +34,6 @@
             font-family: 'Poppins', sans-serif !important;
         }
 
-
         .title-data {
             padding: 40px 20px;
             background: linear-gradient(rgba(139, 69, 19, 0.9), rgba(139, 69, 19, 0.7)), url('images/bg\ lagi.png');
@@ -195,6 +194,10 @@
                 padding: 15px;
                 margin: 0 10px 30px 10px;
             }
+
+            #myTable tbody td {
+                font-size: 12px;
+            }
         }
 
         header {
@@ -221,64 +224,66 @@
             <h1>Daftar Informasi Publik Pemerintah Kota Surakarta Tahun 2024/2025</h1>
         </header>
         <div class="content-wrapper">
-            <table id="myTable" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Jenis Informasi</th>
-                        <th>Ringkasan Informasi</th>
-                        <th>Pejabat yang Menguasai Informasi</th>
-                        <th>Penanggung Jawab Informasi</th>
-                        <th>Waktu Pembuatan Informasi</th>
-                        <th>Bentuk Informasi yang tersedia</th>
-                        <th>Jangka Waktu Menyimpan</th>
-                        <th>Jenis Media yang memuat</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Informasi Kebijakan</td>
-                        <td>Peraturan Daerah</td>
-                        <td>Kepala Bagian Hukum</td>
-                        <td>Sekretariat Daerah</td>
-                        <td>Januari 2024</td>
-                        <td>PDF</td>
-                        <td>Permanen</td>
-                        <td>Website</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Informasi Keuangan</td>
-                        <td>APBD 2024</td>
-                        <td>Kepala BPKAD</td>
-                        <td>BPKAD</td>
-                        <td>Februari 2024</td>
-                        <td>PDF, Excel</td>
-                        <td>10 Tahun</td>
-                        <td>Website, Arsip</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Informasi Program</td>
-                        <td>Program Kerja 2024</td>
-                        <td>Kepala Bappeda</td>
-                        <td>Bappeda</td>
-                        <td>Maret 2024</td>
-                        <td>PDF</td>
-                        <td>5 Tahun</td>
-                        <td>Website, Arsip</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table id="myTable" class="display table table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Jenis Informasi</th>
+                            <th>Ringkasan Informasi</th>
+                            <th>Pejabat yang Menguasai Informasi</th>
+                            <th>Penanggung Jawab Informasi</th>
+                            <th>Waktu Pembuatan Informasi</th>
+                            <th>Bentuk Informasi yang tersedia</th>
+                            <th>Jangka Waktu Menyimpan</th>
+                            <th>Jenis Media yang memuat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Informasi Kebijakan</td>
+                            <td>Peraturan Daerah</td>
+                            <td>Kepala Bagian Hukum</td>
+                            <td>Sekretariat Daerah</td>
+                            <td>Januari 2024</td>
+                            <td>PDF</td>
+                            <td>Permanen</td>
+                            <td>Website</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Informasi Keuangan</td>
+                            <td>APBD 2024</td>
+                            <td>Kepala BPKAD</td>
+                            <td>BPKAD</td>
+                            <td>Februari 2024</td>
+                            <td>PDF, Excel</td>
+                            <td>10 Tahun</td>
+                            <td>Website, Arsip</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Informasi Program</td>
+                            <td>Program Kerja 2024</td>
+                            <td>Kepala Bappeda</td>
+                            <td>Bappeda</td>
+                            <td>Maret 2024</td>
+                            <td>PDF</td>
+                            <td>5 Tahun</td>
+                            <td>Website, Arsip</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <?php include 'includes/footer.html'; ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#myTable').DataTable({
                 paging: true,
                 searching: true,
@@ -298,17 +303,10 @@
                         previous: "Sebelumnya"
                     }
                 },
-                initComplete: function() {
+                initComplete: function () {
                     $('.dataTables_filter input').attr('placeholder', 'Cari data...');
                 }
             });
-        });
-    </script>
-    <script>
-        document.body.classList.add('preload');
-
-        window.addEventListener('load', function() {
-            document.body.classList.remove('preload');
         });
     </script>
 </body>
