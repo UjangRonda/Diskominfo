@@ -15,13 +15,30 @@
       font-family: 'Poppins', sans-serif !important;
     }
 
-    .galeri-section {
-      background-image: url('images/bg lagi.png');
-      background-size: cover;
-      background-position: center;
-      height: 90vh;
-    }
+    header {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 62, 47, 0.9),
+            rgba(184, 78, 58, 0.9)
+          ),
+          url("images/bg3.png") center/cover no-repeat;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 12px;
+        max-width: 1200px;
+        margin-top: 120px;
+      }
 
+      section{
+        margin: 20px auto;
+        padding: 10px;
+        width: 90%;
+      }
+      
     .text-overlay {
       height: 100%;
       display: flex;
@@ -69,7 +86,7 @@
       border: none;
       box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s;
-      height: 270px;
+      height: 300px;
     }
 
     .galeri-container .card1:hover {
@@ -117,19 +134,11 @@
 <body>
   <?php include 'includes/navbar.html'; ?>
 
-  <section>
-    <div class="container-fluid galeri-section">
-      <div class="row text-overlay">
-        <div class="col-12 text-center">
-          <div class="mb-3">
-            <img src="images/Logo Diskominfo.png" alt="Logo Solo: The Spirit of Java" style="max-width: 180px;" />
-          </div>
-          <h1 class="title-galeri">GALERI</h1>
-          <h3 class="subtitle-galeri">PEJABAT PENGELOLA INFORMASI DAN DOKUMENTASI (PPID)<br>KOTA SURAKARTA</h3>
-        </div>
-      </div>
-    </div>
+  <header>
+      <h1>Galeri PPID Kota Surakarta</h1>
+  </header>
 
+  <section>
     <div class="text-center">
       <h1 class="h1-title-sub-galeri">GALERI KEGIATAN</h1>
       <p class="subtitle-sub-galeri">Pejabat Pengelola Informasi dan Dokumentasi Kota Surakarta</p>

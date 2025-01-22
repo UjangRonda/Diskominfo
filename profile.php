@@ -25,191 +25,209 @@
         th {
             font-family: 'Poppins', sans-serif !important;
         }
-    .profile-section {
-      background-image: url('images/bg lagi.png');
-      background-size: cover;
-      background-position: center;
-      height: 90vh;
-    }
+        
 
-    .text-overlay {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 50px;
-    }
+        header {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 62, 47, 0.9),
+            rgba(184, 78, 58, 0.9)
+          ),
+          url("images/bg3.png") center/cover no-repeat;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 12px;
+        max-width: 1200px;
+        margin-top: 120px;
+      }
 
-    .text-center {
-      text-align: center;
-    }
+      section{
+        margin: 20px auto;
+        padding: 10px;
+        width: 80%;
+      }
 
-    .text-white {
-      color: white;
-    }
+      .text-overlay {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+      }
 
-    .title-profile {
-      font-size: 45px;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 15px;
-    }
+      .text-center {
+        text-align: center;
+      }
 
-    .subtitle-profile {
-      font-size: 30px;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 30px;
-    }
+      .text-white {
+        color: white;
+      }
 
-    .title-visi-misi {
-      margin-bottom: 20px;
-      margin-top: 60px;
-    }
-
-    .title-visi-misi h1 {
-      font-size: 32px;
-      font-weight: bold;
-      text-align: left;
-      text-transform: uppercase;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .sub-title-visi-misi {
-      font-size: 18px;
-      margin-bottom: 10px;
-      font-family: 'Poppins', sans-serif;
-      text-align: left;
-    }
-
-    .title-visi-misi::after {
-      content: '';
-      display: block;
-      width: 90px;
-      height: 5px;
-      background-color: #a55a42;
-      margin-top: 5px;
-      margin-bottom: 15px;
-    }
-
-    .content-section {
-      text-align: left;
-      padding-left: 15px;
-    }
-
-    .content-section ul {
-      list-style-type: decimal;
-    }
-
-    @media (max-width: 768px) {
       .title-profile {
-        font-size: 28px;
+        font-size: 45px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 15px;
       }
 
       .subtitle-profile {
-        font-size: 18px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 30px;
       }
-    }
 
-    .h1-title-sub-prpfile {
-      font-size: 32px;
-      font-weight: bold;
-      text-align: left;
-      text-transform: uppercase;
-      font-family: 'Poppins', sans-serif;
-      margin-top: 40px;
-    }
+      .title-visi-misi {
+        margin-bottom: 20px;
+        margin-top: 60px;
+      }
 
-    .h1-title-sub-prpfile::after {
-      content: '';
-      display: block;
-      width: 90px;
-      height: 5px;
-      background-color: #a55a42;
-      margin: 15px auto 15px auto;
-    }
+      .title-visi-misi h1 {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+      }
 
-    .subtitle-sub-profile {
-      font-size: 19px;
-      margin-bottom: 10px;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-    }
+      .sub-title-visi-misi {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+      }
 
-    /* Styling untuk shadowed boxes */
-    .shadow-box {
-      display: flex;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      margin-bottom: 20px;
-      flex-direction: row-reverse; 
-    }
+      .title-visi-misi::after {
+        content: '';
+        display: block;
+        width: 90px;
+        height: 5px;
+        background-color: #a55a42;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
 
-    .shadow-box img {
-      max-width: 40%;
-      height: auto;
-      object-fit: cover;
-      margin-left: 10px;
-    }
+      .content-section {
+        text-align: left;
+        padding-left: 15px;
+      }
 
-    .shadow-box .text-content {
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 60%;
-      font-size: 14px; 
-      text-align: left;
-    }
+      .content-section ul {
+        list-style-type: decimal;
+      }
 
-    .shadow-box .text-content h2, 
-    .shadow-box .text-content h4, 
-    .shadow-box .text-content p {
-      margin: 0;
-      padding-bottom: 10px;
-      font-family: 'Poppins', sans-serif;
-    }
+      @media (max-width: 768px) {
+        .title-profile {
+          font-size: 28px;
+        }
 
-    .shadow-box .text-content p {
-      font-size: 13px;
-      font-family: 'Poppins', sans-serif;
-    }
+        .subtitle-profile {
+          font-size: 18px;
+        }
+      }
 
-    .desk-layanan .col-md-6 {
-      margin-bottom: 20px;
-      font-family: 'Poppins', sans-serif;
-    }
+      .h1-title-sub-prpfile {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 40px;
+      }
 
-    .desk-layanan .btn {
-      text-transform: uppercase;
-    }
+      .h1-title-sub-prpfile::after {
+        content: '';
+        display: block;
+        width: 90px;
+        height: 5px;
+        background-color: #a55a42;
+        margin: 15px auto 15px auto;
+      }
 
-    @media (min-width: 768px) {
-      .desk-layanan .col-md-6 {
+      .subtitle-sub-profile {
+        font-size: 19px;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+      }
+
+      .shadow-box {
+        display: flex;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        margin-bottom: 20px;
+        flex-direction: row-reverse; 
+      }
+
+      .shadow-box img {
+        max-width: 40%;
+        height: auto;
+        object-fit: cover;
+        margin-left: 10px;
+      }
+
+      .shadow-box .text-content {
+        padding-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 60%;
+        font-size: 14px; 
+        text-align: left;
       }
 
-      .desk-layanan .col-md-6 img {
-        max-height: 300px;
+      .shadow-box .text-content h2, 
+      .shadow-box .text-content h4, 
+      .shadow-box .text-content p {
+        margin: 0;
+        padding-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .shadow-box .text-content p {
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .desk-layanan .col-md-6 {
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .desk-layanan .btn {
+        text-transform: uppercase;
+      }
+
+      @media (min-width: 768px) {
+        .desk-layanan .col-md-6 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .desk-layanan .col-md-6 img {
+          max-height: 300px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+
+      .item-img-tugas-bagan {
+        width: 100%; 
+        height: 80%; 
         object-fit: cover;
-        border-radius: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-    }
-
-    .item-img-tugas-bagan {
-      width: 100%; 
-      height: 80%; 
-      object-fit: cover;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   </style>
 </head>
 
@@ -217,19 +235,11 @@
   <?php include 'includes/navbar.html'; ?>
 
   <!-- Main Content -->
-  <section>
-    <div class="container-fluid profile-section">
-      <div class="row text-overlay">
-        <div class="col-12 text-center">
-          <div class="logo-profile-section mb-3">
-            <img src="images/Logo Diskominfo.png" alt="Logo Solo: The Spirit of Java" class="img-logo-profile" style="max-width: 180px; height: auto; padding-top: -30px;" />
-          </div>
-          <h1 class="title-profile text-white">PROFILE</h1>
-          <h3 class="subtitle-profile text-white">PEJABAT PENGELOLA INFORMASI DAN DOKUMENTASI ( PPID )<br>KOTA SURAKARTA</h3>
-        </div>
-      </div>
-    </div>
+  <header>
+      <h1>Profile PPID Kota Surakarta</h1>
+  </header>
 
+  <section>
     <div class="container my-5">
       <div class="title-visi-misi">
         <h1>Visi</h1>
