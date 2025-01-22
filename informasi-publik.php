@@ -11,10 +11,10 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/keyframe.css" />
     <style>
         :root {
-            --primary-color: #8B4513;
+            --primary-color: #9e514c;
             --secondary-color: #D2691E;
             --bg-color: #FFF8DC;
             --text-color: #5D4037;
@@ -63,6 +63,18 @@
             margin: 0 20px 40px 20px;
         }
 
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            transition: all 0.3s ease;
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            transform: translateY(-1px);
+        }
+
+        .dataTables_processing {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
         #myTable {
             background-color: white;
             border-radius: 10px;
@@ -77,6 +89,8 @@
             font-weight: 600;
             border: none;
             padding: 15px 10px;
+            animation: slideIn 0.5s ease-out;
+            animation-fill-mode: both;
         }
 
         #myTable tbody td {
@@ -84,10 +98,16 @@
             border-color: #f0f0f0;
         }
 
+        #myTable tbody tr {
+            transition: all 0.3s ease;
+        }
+
+
         #myTable tbody tr:hover {
             background-color: #FFF3E0 !important;
-            transform: translateY(-1px);
             transition: all 0.2s ease;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(139, 69, 19, 0.1);
         }
 
         .dataTables_wrapper .dataTables_length select,
@@ -97,11 +117,13 @@
             border-radius: 6px;
             padding: 6px 10px;
             color: var(--text-color);
+            transition: all 0.3s ease;
         }
 
         .dataTables_wrapper .dataTables_filter input:focus {
             outline: none;
             box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+            transform: scale(1.02);
         }
 
         .dataTables_wrapper .dataTables_paginate .paginate_button.current {
@@ -116,7 +138,9 @@
             background: var(--secondary-color) !important;
             color: white !important;
             border: none !important;
+            transform: translateY(-1px);
         }
+
 
         .dataTables_wrapper .dataTables_length,
         .dataTables_wrapper .dataTables_filter,
@@ -126,7 +150,42 @@
             margin: 15px 0;
         }
 
-        /* Responsive adjustments */
+        #myTable thead th:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        #myTable thead th:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        #myTable thead th:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        #myTable thead th:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        #myTable thead th:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        #myTable thead th:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        #myTable thead th:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        #myTable thead th:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        #myTable thead th:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
         @media (max-width: 768px) {
             .title-data h1 {
                 font-size: 1.8rem;
@@ -137,6 +196,20 @@
                 margin: 0 10px 30px 10px;
             }
         }
+
+        header {
+            background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
+                url("images/bg3.png") center/cover no-repeat;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 12px;
+            max-width: 1200px;
+            animation: fadeIn 0.8s ease-out;
+        }
     </style>
 </head>
 
@@ -144,9 +217,9 @@
     <?php include 'includes/navbar.html'; ?>
 
     <section class="main-content" style="margin-top: 100px;">
-        <div class="title-data">
+        <header>
             <h1>Daftar Informasi Publik Pemerintah Kota Surakarta Tahun 2024/2025</h1>
-        </div>
+        </header>
         <div class="content-wrapper">
             <table id="myTable" class="display" style="width:100%">
                 <thead>
