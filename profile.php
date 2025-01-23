@@ -130,7 +130,7 @@
         }
       }
 
-      .h1-title-sub-prpfile {
+      .h1-title-sub-profile {
         font-size: 32px;
         font-weight: bold;
         text-align: left;
@@ -139,7 +139,7 @@
         margin-top: 40px;
       }
 
-      .h1-title-sub-prpfile::after {
+      .h1-title-sub-profile::after {
         content: '';
         display: block;
         width: 90px;
@@ -162,8 +162,13 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: white;
+        margin-top: 20px;
         margin-bottom: 20px;
         flex-direction: row-reverse; 
+        background-color: #a55a42; 
+        height: 500px; /* Tinggi tetap untuk semua card */
+        width: 100%; /* Lebar sesuai kolom */
+        box-sizing: border-box; /* Pastikan padding dihitung dalam ukuran */
       }
 
       .shadow-box img {
@@ -228,6 +233,17 @@
         align-items: center;
         justify-content: center;
       }
+
+      .custom-btn {
+        background-color: #a55a42; 
+        border-color: #a55a42;    
+      }
+
+      .custom-btn:hover {
+        background-color: #8e4e39; 
+        border-color: #8e4e39;   
+      }
+
   </style>
 </head>
 
@@ -261,20 +277,36 @@
         </ul>
       </div>
 
-      <div class="title-sub-prpfile text-center">
-        <h1 class="h1-title-sub-prpfile text-center">TUGAS DAN FUNGSI PPID</h1>
+      <div class="title-visi-misi">
+        <h1>Dasar Hukum</h1>
+      </div>
+      <div class="content-section">
+        <ul class="sub-title-visi-misi">
+          <li>Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik;</li>
+          <li>Peraturan Pemerintah Nomor 61 Tahun 2010 tentang Pelaksanaan Undang-Undang Nomor 14 Tahun 2008 yentang Keterbukaan Informasi Publik;</li>
+          <li>Peraturan Menteri Dalam Negeri Nomor 3 Tahun 2017 tentang Pedoman Pengeloaan Pelayanan Informasi dan Dokumentasi Kementerian Dalam Negeri dan Pemerintahan Daerah</li>
+          <li>Peraturan Komisi Informasi Nomor 1 Tahun 2013 tentang Prosedur Penyelesaian Sengketa Informasi Publik;</li>
+          <li>Peraturan Komisi Informasi Nomor 1 Tahun 2021 tentang Standar Layanan Informasi Publik;</li>
+          <li>Peraturan Daerah Kota Surakarta Nomor 11 Tahun 2013 tentang Keterbukaan Informasi Publik Kota Surakarta;</li>
+          <li>Perwali No. 4.3 Tahun 2023 Tentang Standar Layanan Informasi Publik di Lingkungan Pemkot Surakarta</li>
+          <li>Keputusan Walikota Surakarta Nomor 478.05/60 Tahun 2024 tentang Kelembagaan Pengelola Informasi dan Dokumentasi Pemerintah Kota Surakarta.</li>
+        </ul>
+      </div>
+
+      <div class="title-sub-profile text-center">
+        <h1 class="h1-title-sub-profile text-center">TUGAS DAN FUNGSI PPID</h1>
         <p class="subtitle-sub-profile text-center">Pejabat Pengelola Informasi dan Dokumentasi Kota Surakarta</p>
         <img src="images/tugas.png" alt="#" class="item-img-tugas-bagan">
       </div>
 
-      <div class="title-sub-prpfile text-center">
-        <h1 class="h1-title-sub-prpfile text-center">BAGAN ORGANISASI</h1>
+      <div class="title-sub-profile text-center">
+        <h1 class="h1-title-sub-profile text-center">BAGAN ORGANISASI</h1>
         <p class="subtitle-sub-profile text-center">Pejabat Pengelola Informasi dan Dokumentasi Kota Surakarta</p>
         <img src="images/bagan.png" alt="#" class="item-img-tugas-bagan">
       </div>
 
-      <div class="title-sub-prpfile text-center">
-        <h1 class="h1-title-sub-prpfile text-center">DESK LAYANAN</h1>
+      <div class="title-sub-profile text-center">
+        <h1 class="h1-title-sub-profile text-center">DESK LAYANAN</h1>
         <p class="subtitle-sub-profile text-center">Pejabat Pengelola Informasi dan Dokumentasi Kota Surakarta</p>
       </div>
 
@@ -283,15 +315,14 @@
           <div class="shadow-box">
           <img src="images/ppid utama.png" alt="Layanan PPID Utama">
             <div class="text-content">
-              <h4 class="text-warning">DESK LAYANAN</h4>
-              <h2 class="fw-bold mb-2">PPID UTAMA</h2>
-              <p class="text-muted">
+              <h2 class="fw-bold mb-2 text-white">PPID UTAMA</h2>
+              <p class="text-white">
               Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
               </p>
-              <ul class="list-unstyled">
-                <li class="mb-2"><i class="bi bi-geo-alt-fill"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
-                <li class="mb-2"><i class="bi bi-envelope-fill"></i> ppidutama@surakarta.go.id</li>
-                <li><i class="bi bi-clock-fill"></i> Senin s/d Kamis 07.30 - 16.00, Jumat 07.30 - 16.30</li>
+              <ul class="list-unstyled text-white">
+                <li class="mb-2"><i class="bi bi-geo-alt-fill text-white"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
+                <li class="mb-2"><i class="bi bi-envelope-fill text-white"></i> ppidutama@surakarta.go.id</li>
+                <li><i class="bi bi-clock-fill text-white"></i> Senin s/d Kamis 07.30 - 16.00, Jumat 07.30 - 16.30</li>
               </ul>
               <a href="#" class="btn btn-warning text-white fw-bold mt-3">Kunjungi Sekarang →</a>
             </div>
@@ -302,15 +333,14 @@
           <div class="shadow-box">
           <img src="images/mall layanan.png" alt="Layanan PPID Utama">
             <div class="text-content">
-              <h4 class="text-warning">DESK LAYANAN</h4>
-              <h2 class="fw-bold mb-2">MALL PELAYANAN PUBLIK</h2>
-              <p class="text-muted">
+              <h2 class="fw-bold mb-2 text-white">MALL PELAYANAN PUBLIK</h2>
+              <p class="text-white">
               Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
               </p>
-              <ul class="list-unstyled">
-                <li class="mb-2"><i class="bi bi-geo-alt-fill"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
-                <li class="mb-2"><i class="bi bi-envelope-fill"></i> ppidutama@surakarta.go.id</li>
-                <li><i class="bi bi-clock-fill"></i> Senin s/d Jumat 08.30 - 14.30</li>
+              <ul class="list-unstyled text-white">
+                <li class="mb-2 text-white"><i class="bi bi-geo-alt-fill"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
+                <li class="mb-2 text-white"><i class="bi bi-envelope-fill"></i> ppidutama@surakarta.go.id</li>
+                <li text-white><i class="bi bi-clock-fill text-white"></i> Senin s/d Jumat 08.30 - 14.30</li>
               </ul>
               <a href="#" class="btn btn-warning text-white fw-bold mt-3">Kunjungi Sekarang →</a>
             </div>
@@ -319,6 +349,7 @@
       </div>
     </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <?php include 'includes/footer.html'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
