@@ -110,8 +110,13 @@
             margin: 20px auto;
             max-width: 1200px;
         }
-        form{
+        .form-span{
             display: flex;
+            flex-direction: row;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
         }
 
         .form-container {
@@ -123,14 +128,14 @@
             flex: 1;
         }
 
-        .form-container label {
+        .form-span label {
             color: var(--text-color);
             font-weight: 600;
             margin-bottom: 8px;
         }
 
-        .form-container input,
-        .form-container textarea {
+        .form-span input,
+        .form-span textarea {
             border-radius: 8px;
             border: 2px solid var(--primary-color);
             padding: 10px;
@@ -139,14 +144,14 @@
             background: #f9f3f1;
         }
 
-        .form-container input:focus,
-        .form-container textarea:focus {
+        .form-span input:focus,
+        .form-span textarea:focus {
             outline: none;
             box-shadow: 0 0 0 2px rgba(139, 62, 47, 0.2);
             background: #f5e4e1;
         }
 
-        .form-container button {
+        form button {
             background-color: var(--primary-color);
             color: white;
             border: none;
@@ -157,7 +162,7 @@
             transition: background-color 0.3s, transform 0.3s;
         }
 
-        .form-container button:hover {
+        form button:hover {
             background-color: var(--secondary-color);
             transform: scale(1.05);
         }
@@ -183,6 +188,26 @@
             font-size: 1.5em;
             text-align: center;
         }
+
+        @media (max-width: 768px) {
+            .form-span {
+                flex-direction: column-reverse;
+            }
+
+            .form-container {
+                padding: 0;
+            }
+
+            .image-container img {
+                width: 100%;
+            }
+            .radio-container label{
+                font-size: 12px;
+            }
+            .radio-container{
+                display: inline;
+            }
+        }
     </style>
 </head>
 
@@ -194,53 +219,56 @@
         </header>
         <div class="content-wrapper">
             <form>
-                <div class="form-container">
-                    <label for="nik">NIK</label>
-                    <input type="number" id="nik" name="nik" placeholder="Masukkan NIK anda" required>
+                <div class="form-span">
+                    <div class="form-container">
+                        <label for="nik">NIK</label>
+                        <input type="number" id="nik" name="nik" placeholder="Masukkan NIK anda" required>
 
-                    <label for="kategori">Kategori Permohonan</label>
-                    <input type="text" id="kategori" name="kategori" placeholder="Pilih Kategori Permohonan" required>
+                        <label for="kategori">Kategori Permohonan</label>
+                        <input type="text" id="kategori" name="kategori" placeholder="Pilih Kategori Permohonan" required>
 
-                    <label for="tujuan">Tujuan Penggunaan Informasi</label>
-                    <textarea id="tujuan" name="tujuan" placeholder="Sebutkan Tujuan Penggunaan Informasi" required></textarea>
+                        <label for="tujuan">Tujuan Penggunaan Informasi</label>
+                        <textarea id="tujuan" name="tujuan" placeholder="Sebutkan Tujuan Penggunaan Informasi" required></textarea>
 
-                    <label for="rincian">Rincian Informasi</label>
-                    <textarea id="rincian" name="rincian" placeholder="Rincian Informasi" required></textarea>
+                        <label for="rincian">Rincian Informasi</label>
+                        <textarea id="rincian" name="rincian" placeholder="Rincian Informasi" required></textarea>
 
-                    <label>Salinan Informasi</label>
-                    <div class="radio-container">
-                        <div><input type="radio" id="softcopy" name="salinan"><label for="softcopy">Softcopy</label></div>
-                        <div><input type="radio" id="hardcopy" name="salinan"><label for="hardcopy">Hardcopy</label></div>
+                        <label>Salinan Informasi</label>
+                        <div class="radio-container">
+                            <div><input type="radio" id="softcopy" name="salinan"><label for="softcopy">Softcopy</label></div>
+                            <div><input type="radio" id="hardcopy" name="salinan"><label for="hardcopy">Hardcopy</label></div>
+                        </div>
+
+                        <label>Cara Mendapatkan Salinan Informasi</label>
+                        <div class="radio-container">
+                            <div><input type="radio" id="faksimili" name="cara"><label for="faksimili">Faksimili</label></div>
+                            <div><input type="radio" id="langsung" name="cara"><label for="langsung">Mengambil Langsung</label></div>
+                            <div><input type="radio" id="takeemail" name="cara"><label for="takeemail">E-mail</label></div>
+                        </div>
                     </div>
+                    <div class="form-container sub">
+                        <div class="image-container">
+                            <img src="images/idcard.png" alt="ID Card">
+                            <label class="upload-overlay">
+                                <span>Upload KTP Disini</span>
+                                <input type="file" accept="image/*">
+                            </label>
+                        </div>
+                        </br>
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
 
-                    <label>Cara Mendapatkan Salinan Informasi</label>
-                    <div class="radio-container">
-                        <div><input type="radio" id="faksimili" name="cara"><label for="faksimili">Faksimili</label></div>
-                        <div><input type="radio" id="langsung" name="cara"><label for="langsung">Mengambil Langsung</label></div>
-                        <div><input type="radio" id="takeemail" name="cara"><label for="takeemail">E-mail</label></div>
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat Anda"></textarea>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan Email anda" required>
+
+                        <label for="nomor">Nomor Telepon</label>
+                        <input type="number" id="nomor" name="telp" placeholder="Masukkan Nomor Telepon anda" required>
                     </div>
                 </div>
-                <div class="form-container sub">
-                    <div class="image-container">
-                        <img src="images/idcard.png" alt="ID Card">
-                        <label class="upload-overlay">
-                            <span>Upload KTP Disini</span>
-                            <input type="file" accept="image/*">
-                        </label>
-                    </div>
-                    <label for="nama">Nama Lengkap</label>
-                    <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
-
-                    <label for="alamat">Alamat</label>
-                    <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat Anda"></textarea>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Masukkan Email anda" required>
-
-                    <label for="nomor">Nomor Telepon</label>
-                    <input type="number" id="nomor" name="telp" placeholder="Masukkan Nomor Telepon anda" required>
-                    <button type="submit">Kirim Permohonan</button>
-                </div>
+                <button type="submit">Kirim Permohonan</button>
             </form>
         </div>
     </div>

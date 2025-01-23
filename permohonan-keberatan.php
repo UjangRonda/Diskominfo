@@ -128,6 +128,21 @@
             object-fit: cover;
             display: block;
         }
+        @media (max-width: 768px) {
+            .content-wrapper{
+                flex-direction: column;
+            }
+            .img-container {
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .img-container img{
+                object-fit: cover;
+            }
+        }
     </style>
 </head>
 
