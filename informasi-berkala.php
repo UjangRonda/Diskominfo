@@ -7,7 +7,7 @@
     <title>Informasi Berkala</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/keyframes.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body,
@@ -54,11 +54,33 @@
         }
 
         .catalog-section {
+            opacity: 0;
             border: #5c4033 solid 5px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            animation: fadeIn 1.5s ease-out forwards;
+            animation-delay: 0s;
         }
+
+        .catalog-section:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .catalog-section:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .catalog-section:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .catalog-section:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        /* Tambahkan aturan untuk lebih banyak elemen jika perlu */
+
 
         .catalog-section:hover {
             transform: translateY(-5px);
@@ -110,6 +132,7 @@
                 grid-template-columns: 1fr;
             }
         }
+
         header {
             background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
                 url("images/bg3.png") center/cover no-repeat;
@@ -131,7 +154,7 @@
     <section class="main-content" style="margin-top: 100px;">
         <header>
             <h1>Katalog Informasi Berkala</h1>
-    </header>
+        </header>
         <div class="catalog-container">
 
             <div class="catalog-section">
