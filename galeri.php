@@ -16,29 +16,29 @@
     }
 
     header {
-        background: linear-gradient(
-            135deg,
-            rgba(139, 62, 47, 0.9),
-            rgba(184, 78, 58, 0.9)
-          ),
-          url("images/bg3.png") center/cover no-repeat;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 12px;
-        max-width: 1200px;
-        margin-top: 120px;
-      }
+      background: linear-gradient(
+          135deg,
+          rgba(139, 62, 47, 0.9),
+          rgba(184, 78, 58, 0.9)
+        ),
+        url("images/bg3.png") center/cover no-repeat;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 12px;
+      max-width: 1200px;
+      margin-top: 120px;
+    }
 
-      section{
-        margin: 20px auto;
-        padding: 10px;
-        width: 90%;
-      }
-      
+    section {
+      margin: 20px auto;
+      padding: 10px;
+      width: 90%;
+    }
+
     .text-overlay {
       height: 100%;
       display: flex;
@@ -83,14 +83,20 @@
     }
 
     .galeri-container .card1 {
-      border: none;
-      box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      border: 2px solid #a55a42; /* Border berwarna */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
       height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      opacity: 0; /* Awalnya tidak terlihat */
+      transform: translateY(20px); /* Geser ke bawah */
+      animation: slideIn 0.5s forwards; /* Animasi masuk */
     }
 
     .galeri-container .card1:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
 
     .galeri-container .card1-body {
@@ -127,6 +133,19 @@
       width: 100%;
       height: 150px;
       object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .galeri-container .card1:hover .card1-img-top {
+      transform: scale(1.05);
+    }
+
+    /* Animasi masuk */
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -135,7 +154,7 @@
   <?php include 'includes/navbar.html'; ?>
 
   <header>
-      <h1>Galeri PPID Kota Surakarta</h1>
+    <h1>Galeri PPID Kota Surakarta</h1>
   </header>
 
   <section>
@@ -147,6 +166,7 @@
     <section class="galeri-container">
       <div class="container my-5">
         <div class="row">
+          <!-- Card 1 -->
           <div class="col-md-3 mb-4">
             <div class="card1">
               <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/12/Rapat-Persiapan-Presentasi-dan-Verifikasi-PPID-Tahun-2022-1.jpeg" class="card1-img-top" alt="Galeri 1" />
@@ -156,105 +176,37 @@
               </div>
             </div>
           </div>
+          <!-- Card 2 -->
           <div class="col-md-3 mb-4">
             <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/12/Koordinasi-Persiapan-Tim-Visitasi-Keterbukaan-Informasi-Tahun-2022.jpeg" class="card1-img-top" alt="Galeri 1" />
+              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/12/Koordinasi-Persiapan-Tim-Visitasi-Keterbukaan-Informasi-Tahun-2022.jpeg" class="card1-img-top" alt="Galeri 2" />
               <div class="card1-body">
                 <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
                 <h6 class="card1-title">Koordinasi Persiapan Tim Visitasi Keterbukaan Informasi Tahun 2022</h6>
               </div>
             </div>
           </div>
+          <!-- Card 3 -->
           <div class="col-md-3 mb-4">
             <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/12/Pencermatan-Website-PPID-Kota-Surakarta-1.jpeg" class="card1-img-top" alt="Galeri 1" />
+              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/12/Pencermatan-Website-PPID-Kota-Surakarta-1.jpeg" class="card1-img-top" alt="Galeri 3" />
               <div class="card1-body">
                 <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
                 <h6 class="card1-title">Pencermatan Website PPID Kota Surakarta</h6>
               </div>
             </div>
           </div>
+          <!-- Card 4 -->
           <div class="col-md-3 mb-4">
             <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/04/Pendampingan-Pengisian-DIP-Pada-14-Website-Kelurahan-2.jpeg" class="card1-img-top" alt="Galeri 1" />
+              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/04/Pendampingan-Pengisian-DIP-Pada-14-Website-Kelurahan-2.jpeg" class="card1-img-top" alt="Galeri 4" />
               <div class="card1-body">
                 <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
                 <h6 class="card1-title">Pendampingan Pengisian DIP Pada 14 Website Kelurahan</h6>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/04/Pendampingan-Uploading-DIP-Tahun-2022-1.jpeg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Pendampingan Uploading DIP Tahun 2022</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/04/Persiapan-Pembahasan-Daftar-Informasi-Yang-Dikecualikan-1.jpeg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Persiapan Pembahasan Daftar Informasi Yang Dikecualikan</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/02/Screenshot_19.jpg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Upaya Pemerintah Kota Surakarta Dalam Pencegahan dan Penanggulangan Kasus Covid-19</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/02/Screenshot_32.jpg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Jumlah Pasien Omicron di Solo Meningkat, Walikota Gibran Minta Pembelajaran di Sekolah Menggunakan Hybrid Learning</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/02/Screenshot_36.jpg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Dinas Pendidikan Surakarta Siap Melaksanakan PTM 100% untuk Jenjang SMP</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/04/WhatsApp-Image-2022-01-27-at-10.15.56.jpeg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Diskominfo SP Kota Surakarta mengadakan Bimbingan Teknis Penyusunan DIP PPID dan PPID Pelaksana Tahun 2022</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/02/IMG_5882-1200x720-1.jpg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Februari Kota Solo PTM 100 Persen</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card1">
-              <img src="https://ppid.surakarta.go.id/wp-content/uploads/2022/02/85B135FD-CA9F-4CA0-BBBD-D07BB2787069-1318-0000008F468970A2-1200x720-1.jpg" class="card1-img-top" alt="Galeri 1" />
-              <div class="card1-body">
-                <small class="text-muted"><i class="bi bi-calendar"></i> Senin, 20 Januari 2025</small>
-                <h6 class="card1-title">Walikota Surakarta Tinjau Vaksinasi Booster Untuk Lansia</h6>
-              </div>
-            </div>
-          </div>
+          <!-- Add more cards as needed -->
         </div>
       </div>
     </section>

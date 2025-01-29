@@ -166,9 +166,9 @@
         margin-bottom: 20px;
         flex-direction: row-reverse; 
         background-color: #a55a42; 
-        height: 500px; /* Tinggi tetap untuk semua card */
-        width: 100%; /* Lebar sesuai kolom */
-        box-sizing: border-box; /* Pastikan padding dihitung dalam ukuran */
+        height: 500px; 
+        width: 100%; 
+        box-sizing: border-box; 
       }
 
       .shadow-box img {
@@ -243,7 +243,57 @@
         background-color: #8e4e39; 
         border-color: #8e4e39;   
       }
+      
+      .card.card-profile {
+        background-color: #8e4e39;
+        border-radius: 12px;
+        padding: 10px;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        max-width: 630px;
+        width: 100%; 
+        max-height: 390px;
+        margin: 0 auto;
+      }
 
+      .container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin: 20px 0; 
+      }
+
+      .card.card-profile .text-content iframe {
+        width: 100%; 
+        height: auto; 
+        aspect-ratio: 16 / 9; 
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .card.card-profile {
+          max-width: 100%; 
+          padding: 15px; 
+        }
+
+        .container1 {
+          flex-direction: column; 
+          align-items: center; 
+        }
+
+        .card.card-profile .text-content iframe {
+          width: 100%; 
+          height: auto; 
+        }
+      }
+
+      .card.card-profile:hover {
+      box-shadow: none; 
+      transform: none; 
+      }
   </style>
 </head>
 
@@ -257,6 +307,30 @@
 
   <section>
     <div class="container my-5">
+      <div class="container1">
+        <div class="card card-profile">
+          <div class="text-content">
+            <iframe
+              width="600"
+              height="360"
+              src="https://www.youtube.com/embed/dBmqtoBlJYg?autoplay=1&mute=1&si=4ifZhqsV_PFf2aXY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="title-visi-misi">
+        <h1>Profil</h1>
+      </div>
+      <p class="sub-title-visi-misi">Berdasarkan amanah Pasal 13 Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi publik, Pemerintah Kota Surakarta sebagai salah satu Badan Publik telah membentuk Pengelola Informasi dan Dokumentasi sesuai dengan Keputusan Walikota Surakarta Nomor 067/21.1 Tahun 2022 tentang Kelembagaan Pengelola Informasi dan Dokumentasi Pemerintah Kota Surakarta.</p>
+      <p class="sub-title-visi-misi">Menurut Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik, informasi adalah keterangan, pernyataan, gagasan, dan tanda-tanda yang mengandung nilai, makna, dan pesan, baik data, fakta maupun penjelasannya yang dapat dilihat, didengar, dan dibaca yang disajikan dalam berbagai kemasan dan format sesuai dengan perkembangan teknologi informasi dan komunikasi secara elektronik ataupun nonelektronik.</p>
+      <p class="sub-title-visi-misi">Informasi merupakan kebutuhan pokok setiap orang. Oleh karena itu, hak memperoleh informasi termasuk hak asasi manusia. Bahkan, keterbukaan informasi publik merupakan salah satu ciri penting negara demokratis yang menjunjung tinggi kedaulatan rakyat untuk mewujudkan penyelenggaraan negara yang baik. Keterbukaan informasi publik merupakan sarana mengoptimalkan pengawasan publik terhadap penyelenggaraan negara dan Badan Publik lainnya.</p>
+
       <div class="title-visi-misi">
         <h1>Visi</h1>
       </div>

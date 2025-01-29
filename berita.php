@@ -25,10 +25,34 @@
       font-family: 'Poppins', sans-serif !important;
     }
 
+    header {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 62, 47, 0.9),
+            rgba(184, 78, 58, 0.9)
+          ),
+          url("images/bg3.png") center/cover no-repeat;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 12px;
+        max-width: 1200px;
+        margin-top: 120px;
+    }
+
+    section {
+      margin: 20px auto;
+      padding: 10px;
+      width: 80%;
+    }
+
     .berita-container .card1 {
       border: none;
       box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       height: 300px;
       display: flex;
       flex-direction: column;
@@ -37,7 +61,9 @@
     }
 
     .berita-container .card1:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05); 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+      height: 320px; 
     }
 
     .berita-container .card1-body {
@@ -62,7 +88,7 @@
       color: #a55a42;
       width: 45%;
       text-align: left;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       padding: 5px 0;
       line-height: 1;
@@ -83,16 +109,152 @@
       height: 190px;
       object-fit: cover;
     }
+
+    .search-container {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 65%;
+      border-radius: 20px;
+      border: 2px solid #a55a42;
+    }
+
+    .search-container button {
+      background-color: #a55a42;
+      border: none;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .berita-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 5px;
+    }
+
+    .rekomendasi-card {
+      background: linear-gradient(135deg, #8b3e2f, #b84e3a);
+      color: white;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 65%;
+      margin: 0 10px;
+      margin-bottom: 30px;
+    }
+
+    .rekomendasi-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .rekomendasi-card .icon {
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .rekomendasi-card h6 {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%); 
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0); 
+        opacity: 1;
+      }
+    }
+
+    .card1 {
+      animation: slideIn 0.5s ease-out forwards;
+    }
+
+    .card1:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .card1:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .card1:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .rekomendasi-card {
+        width: 100%;
+      }
+
+      .berita-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .col-md-4 {
+        flex: 0 0 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
   <?php include 'includes/navbar.html'; ?>
 
+  <header>
+    <h1>Berita Kota Surakarta</h1>
+  </header>
+
   <section class="berita-container">
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-3 mb-4">
+        <div class="col-lg-3 col-md-4">
+          <div class="search-container">
+            <input type="text" placeholder="Cari berita..." />
+            <button>
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+          <div class="rekomendasi-card">
+            <div class="icon"><i class="bi bi-star"></i></div>
+            <h6>Berita Terbaru</h6>
+          </div>
+          <div class="rekomendasi-card">
+            <div class="icon"><i class="bi bi-fire"></i></div>
+            <h6>Berita Viral</h6>
+          </div>
+          <div class="rekomendasi-card">
+            <div class="icon"><i class="bi bi-clock"></i></div>
+            <h6>Berita Terkini</h6>
+          </div>
+        </div>
+
+        <div class="col-lg-9 col-md-8">
+          <div class="row">
+          <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/20/jokowi_169.jpeg?w=700&q=90"
@@ -110,7 +272,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/20/suasana-rsjd-solo-senin-2012025_169.jpeg?w=700&q=90"
@@ -128,7 +290,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2019/10/10/d7496793-9e50-42f6-b787-eccdaa502083_43.jpeg?w=700&q=90"
@@ -146,7 +308,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/19/rumah-duka-politikus-senior-ppp-almarhum-mudrick-sangidu-di-kartopuran-jayengan-kota-solo-minggu-1912025-malam-1_43.jpeg?w=700&q=90"
@@ -164,7 +326,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/19/rumah-duka-politikus-senior-ppp-almarhum-mudrick-sangidu-di-kartopuran-jayengan-kota-solo-minggu-1912025-malam-2_43.jpeg?w=700&q=90"
@@ -182,7 +344,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/19/lokasi-kaburnya-seorang-pasien-rsjd-dr-arif-zainuddin-solo-minggu-1912025-sore-1_169.jpeg?w=700&q=90"
@@ -200,7 +362,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2019/10/10/d7496793-9e50-42f6-b787-eccdaa502083_43.jpeg?w=700&q=90"
@@ -218,7 +380,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2024/08/08/rumah-sakit-jiwa-daerah-rsjd-dr-arif-zainudin-solo_43.jpeg?w=700&q=90"
@@ -236,7 +398,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/19/lomba-menangis-di-solo_169.jpeg?w=700&q=90"
@@ -254,7 +416,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/18/mensos-gus-ipul-1_169.jpeg?w=700&q=90"
@@ -272,7 +434,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/11/suasana-simpang-joglo-solo-saat-dibuka-sabtu-1112025_169.jpeg?w=700&q=90"
@@ -290,7 +452,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2019/10/18/d8639d7b-7e0d-4f57-a0a2-3ad07509e34d_169.jpeg?w=700&q=90"
@@ -308,7 +470,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/16/petugas-damkar-masih-mencari-orang-yang-dilaporkan-hilang-saat-kebakaran-glodok-plaza-salah-satu-lantai-yang-disisir-ialah-lan-3_169.jpeg?w=700&q=90"
@@ -326,7 +488,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/16/tampang-nanang-gimbal-pembunuh-sandy-permana-2_169.jpeg?w=700&q=90"
@@ -344,7 +506,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/15/megahnya-proyek-rel-layang-di-simpang-tujuh-joglo-solo_169.jpeg?w=700&q=90"
@@ -362,7 +524,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/13/laga-persis-solo-melawan-psm-makassar-pada-pekan-ke-18-liga-1-20242025-di-stadion-manahan-solo-senin-1312025-malam_43.jpeg?w=700&q=90"
@@ -380,7 +542,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/13/makan-bergizi-gratis-3_169.jpeg?w=700&q=90"
@@ -398,7 +560,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2023/07/16/logo-bri-liga-1-logo-liga-1-illustrasi-liga-1-2_169.jpeg?w=700&q=90"
@@ -416,7 +578,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/19/rumah-duka-politikus-senior-ppp-almarhum-mudrick-sangidu-di-kartopuran-jayengan-kota-solo-minggu-1912025-malam-1_43.jpeg?w=700&q=90"
@@ -434,7 +596,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-4 mb-4">
           <div class="card1">
             <img
               src="https://akcdn.detik.net.id/community/media/visual/2025/01/20/suasana-rsjd-solo-senin-2012025_169.jpeg?w=700&q=90"
@@ -452,10 +614,29 @@
             </div>
           </div>
         </div>
+        <div class="col-md-4 mb-4">
+          <div class="card1">
+            <img
+              src="https://akcdn.detik.net.id/community/media/visual/2025/01/20/suasana-rsjd-solo-senin-2012025_169.jpeg?w=700&q=90"
+              class="card1-img-top"
+              alt="Berita 2" />
+            <div class="card1-body">
+              <h6 class="card1-title">
+                RSJ Solo Ungkap Detik-detik Pasien Kabur Lalu Nyebur Bengawan Solo
+              </h6>
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="https://www.detik.com/jateng/berita/d-7740741/rsj-solo-ungkap-detik-detik-pasien-kabur-lalu-nyebur-bengawan-solo"
+                  class="btn btn-read-more1 btn-sm">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <?php include 'includes/footer.html'; ?>
