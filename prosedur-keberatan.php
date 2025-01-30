@@ -24,7 +24,8 @@
   th {
     font-family: 'Poppins', sans-serif !important;
   }
-  h1{
+
+  h1 {
     font-family: 'Poppins', sans-serif !important;
     font-size: 28px !important;
   }
@@ -56,6 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeIn 1s ease-out;
   }
 
   .section-title {
@@ -74,6 +76,7 @@
     width: 80%;
     margin: 20px auto;
     max-width: 1200px;
+    animation: slideInUp 1s ease-out;
   }
 
   .prosedur {
@@ -88,6 +91,7 @@
   .prosedur-img {
     flex: 0 0 auto;
     max-width: 50vw;
+    animation: fadeInRight 1s ease-out;
   }
 
   .prosedur-img img {
@@ -105,6 +109,7 @@
 
   .prosedur-text {
     font-family: 'Poppins', sans-serif;
+    animation: fadeInLeft 1s ease-out;
   }
 
   .prosedur-text h1 {
@@ -178,19 +183,68 @@
       margin: 0 auto;
     }
   }
+
   header {
-            background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
-                url("images/bg3.png") center/cover no-repeat;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            margin: 0 auto;
-            border-radius: 12px;
-            max-width: 1200px;
-            animation: fadeIn 0.8s ease-out;
-        }
+    background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
+      url("images/bg3.png") center/cover no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 12px;
+    max-width: 1200px;
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 </style>
 
 <body>
@@ -249,11 +303,9 @@
     </div>
   </section>
 
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <?php include 'includes/footer.html'; ?>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

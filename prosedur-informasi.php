@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <style>
-                body,
+        body,
         h1,
         h2,
         h3,
@@ -24,12 +24,14 @@
         th {
             font-family: 'Poppins', sans-serif !important;
         }
+
         :root {
             --primary-color: #8b3e2f;
             --secondary-color: #b84e3a;
             --bg-color: #f5f5f5;
             --text-color: #333;
         }
+
         header {
             background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
                 url("images/bg3.png") center/cover no-repeat;
@@ -41,6 +43,7 @@
             margin: 0 auto;
             border-radius: 12px;
             max-width: 1200px;
+            animation: fadeIn 0.8s ease-out;
         }
 
         section {
@@ -81,6 +84,7 @@
             width: 80%;
             margin: 20px auto;
             max-width: 1200px;
+            animation: slideInUp 1s ease-out;
         }
 
         .prosedur {
@@ -95,6 +99,7 @@
         .prosedur-img {
             flex: 0 0 auto;
             max-width: 50vw;
+            animation: fadeInRight 1s ease-out;
         }
 
         .prosedur-img img {
@@ -112,6 +117,7 @@
 
         .prosedur-text {
             font-family: 'Poppins', sans-serif;
+            animation: fadeInLeft 1s ease-out;
         }
 
         .prosedur-text h1 {
@@ -130,20 +136,6 @@
             margin-bottom: 15px;
             padding-left: 24px;
             position: relative;
-        }
-
-        header {
-            background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)),
-                url("images/bg3.png") center/cover no-repeat;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            margin: 0 auto;
-            border-radius: 12px;
-            max-width: 1200px;
-            animation: fadeIn 0.8s ease-out;
         }
 
         .prosedur-text ul li::before {
@@ -199,6 +191,54 @@
                 margin: 0 auto;
             }
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 
@@ -207,13 +247,11 @@
 
     <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
 
-    <!-- Main Content -->
     <section>
         <div class="container-fluid">
             <header>
-                <h1> Prosedur Informasi Publik</h1></h1>
+                <h1>Prosedur Informasi Publik</h1>
             </header>
-            </div>
             <div class="column">
                 <div class="row">
                     <div class="col-12">
@@ -223,9 +261,7 @@
                                     <img src="images/template_ril.jpeg">
                                 </div>
                                 <div class="prosedur-text">
-                                    <h1>
-                                        Mekanisme Pelayanan Informasi Publik
-                                    </h1>
+                                    <h1>Mekanisme Pelayanan Informasi Publik</h1>
                                     <ul>
                                         <li>Pemohon informasi publik mengajukan permohonan kepada PPID melalui website PPID, aplikasi mobile DPS fitur pengaduan, SP4N Lapor, surat, email, atau ke petugas layanan informasi publik.</li>
                                         <li>Pemohon informasi publik mengisi formulir permohonan informasi publik dan memenuhi persyaratan:
@@ -248,9 +284,7 @@
                         <div class="section-content">
                             <div class="prosedur flex" id="prosedur-second">
                                 <div class="prosedur-text">
-                                    <h1>
-                                        Mekanisme Pelayanan Informasi Publik bagi Disabilitas
-                                    </h1>
+                                    <h1>Mekanisme Pelayanan Informasi Publik bagi Disabilitas</h1>
                                     <ul>
                                         <li>Pemohon informasi publik disabilitas datang ke PPID Surakarta.</li>
                                         <li>Petugas menyiapkan protokol kesehatan (prokes) untuk memastikan keamanan dan kenyamanan pemohon.</li>
@@ -272,7 +306,6 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
     <?php include 'includes/footer.html'; ?>
 </body>
 
