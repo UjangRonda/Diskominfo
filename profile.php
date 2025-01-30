@@ -12,288 +12,374 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animation.css" />
   <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        table,
-        td,
-        th {
-            font-family: 'Poppins', sans-serif !important;
-        }
-        
+    body, h1, h2, h3, h4, h5, h6, p, table, td, th {
+      font-family: 'Poppins', sans-serif !important;
+    }
 
-        header {
-        background: linear-gradient(
-            135deg,
-            rgba(139, 62, 47, 0.9),
-            rgba(184, 78, 58, 0.9)
-          ),
-          url("images/bg3.png") center/cover no-repeat;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 12px;
-        max-width: 1200px;
-        margin-top: 120px;
-      }
+    header {
+      background: linear-gradient(135deg, rgba(139, 62, 47, 0.9), rgba(184, 78, 58, 0.9)), url("images/bg3.png") center/cover no-repeat;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      margin: 120px auto 0;
+      border-radius: 12px;
+      max-width: 1200px;
+      animation: fadeIn 1s ease-out;
+    }
 
-      section{
-        margin: 20px auto;
-        padding: 10px;
-        width: 80%;
-      }
+    section {
+      margin: 20px auto;
+      padding: 10px;
+      width: 80%;
+    }
 
-      .text-overlay {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 50px;
-      }
+    .text-overlay {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 50px;
+    }
 
-      .text-center {
-        text-align: center;
-      }
+    .text-center {
+      text-align: center;
+    }
 
-      .text-white {
-        color: white;
-      }
+    .text-white {
+      color: white;
+    }
 
-      .title-profile {
-        font-size: 45px;
-        font-weight: bold;
-        color: white;
-        margin-bottom: 15px;
-      }
+    .title-profile {
+      font-size: 45px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
 
-      .subtitle-profile {
-        font-size: 30px;
-        font-weight: bold;
-        color: white;
-        margin-bottom: 30px;
-      }
+    .subtitle-profile {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
 
-      .title-visi-misi {
-        margin-bottom: 20px;
-        margin-top: 60px;
-      }
+    .title-visi-misi {
+      margin: 60px 0 20px;
+    }
 
-      .title-visi-misi h1 {
-        font-size: 32px;
-        font-weight: bold;
-        text-align: left;
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
-      }
+    .title-visi-misi h1 {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
+    }
 
-      .sub-title-visi-misi {
-        font-size: 18px;
-        margin-bottom: 10px;
-        font-family: 'Poppins', sans-serif;
-        text-align: left;
-      }
+    .sub-title-visi-misi {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
 
-      .title-visi-misi::after {
-        content: '';
-        display: block;
-        width: 90px;
-        height: 5px;
-        background-color: #a55a42;
-        margin-top: 5px;
-        margin-bottom: 15px;
-      }
+    .title-visi-misi::after, .h1-title-sub-profile::after {
+      content: '';
+      display: block;
+      width: 90px;
+      height: 5px;
+      background-color: #a55a42;
+      margin: 5px 0 15px;
+    }
 
-      .content-section {
-        text-align: left;
-        padding-left: 15px;
-      }
+    .content-section {
+      text-align: left;
+      padding-left: 15px;
+    }
 
-      .content-section ul {
-        list-style-type: decimal;
-      }
+    .content-section ul {
+      list-style-type: decimal;
+    }
 
-      @media (max-width: 768px) {
-        .title-profile {
-          font-size: 28px;
-        }
+    .h1-title-sub-profile {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
 
-        .subtitle-profile {
-          font-size: 18px;
-        }
-      }
+    .subtitle-sub-profile {
+      font-size: 19px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
 
-      .h1-title-sub-profile {
-        font-size: 32px;
-        font-weight: bold;
-        text-align: left;
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
-        margin-top: 40px;
-      }
+    .shadow-box {
+      display: flex;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #a55a42;
+      margin: 20px 0;
+      flex-direction: row-reverse;
+      height: 500px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-      .h1-title-sub-profile::after {
-        content: '';
-        display: block;
-        width: 90px;
-        height: 5px;
-        background-color: #a55a42;
-        margin: 15px auto 15px auto;
-      }
+    .shadow-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
-      .subtitle-sub-profile {
-        font-size: 19px;
-        margin-bottom: 10px;
-        font-family: 'Poppins', sans-serif;
-        text-align: center;
-      }
+    .shadow-box img {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      margin-left: 10px;
+    }
 
-      .shadow-box {
-        display: flex;
-        border: 1px solid #ddd;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: white;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        flex-direction: row-reverse; 
-        background-color: #a55a42; 
-        height: 500px; 
-        width: 100%; 
-        box-sizing: border-box; 
-      }
+    .shadow-box .text-content {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 60%;
+      font-size: 14px;
+      text-align: left;
+    }
 
-      .shadow-box img {
-        max-width: 40%;
-        height: auto;
-        object-fit: cover;
-        margin-left: 10px;
-      }
+    .shadow-box .text-content h2, .shadow-box .text-content h4, .shadow-box .text-content p {
+      margin: 0;
+      padding-bottom: 10px;
+    }
 
-      .shadow-box .text-content {
-        padding-left: 20px;
+    .shadow-box .text-content p {
+      font-size: 13px;
+    }
+
+    .desk-layanan .col-md-6 {
+      margin-bottom: 20px;
+    }
+
+    .desk-layanan .btn {
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+      .desk-layanan .col-md-6 {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60%;
-        font-size: 14px; 
-        text-align: left;
       }
 
-      .shadow-box .text-content h2, 
-      .shadow-box .text-content h4, 
-      .shadow-box .text-content p {
-        margin: 0;
-        padding-bottom: 10px;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      .shadow-box .text-content p {
-        font-size: 13px;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      .desk-layanan .col-md-6 {
-        margin-bottom: 20px;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      .desk-layanan .btn {
-        text-transform: uppercase;
-      }
-
-      @media (min-width: 768px) {
-        .desk-layanan .col-md-6 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .desk-layanan .col-md-6 img {
-          max-height: 300px;
-          object-fit: cover;
-          border-radius: 10px;
-        }
-      }
-
-      .item-img-tugas-bagan {
-        width: 100%; 
-        height: 80%; 
+      .desk-layanan .col-md-6 img {
+        max-height: 300px;
         object-fit: cover;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        border-radius: 10px;
+      }
+    }
+
+    .item-img-tugas-bagan {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .item-img-tugas-bagan:hover {
+      transform: scale(1.02);
+    }
+
+    .custom-btn {
+      background-color: #a55a42;
+      border-color: #a55a42;
+    }
+
+    .custom-btn:hover {
+      background-color: #8e4e39;
+      border-color: #8e4e39;
+    }
+
+    .card.card-profile {
+      background-color: #8e4e39;
+      border-radius: 12px;
+      padding: 10px;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      max-width: 630px;
+      width: 100%;
+      max-height: 390px;
+      margin: 0 auto;
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .container1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    .card.card-profile .text-content iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .sub-title-visi-misi{
+        font-size: 14px;
+      }
+      .title-profile {
+        font-size: 22px;
       }
 
-      .custom-btn {
-        background-color: #a55a42; 
-        border-color: #a55a42;    
+      .subtitle-profile {
+        font-size: 10px;
       }
 
-      .custom-btn:hover {
-        background-color: #8e4e39; 
-        border-color: #8e4e39;   
-      }
-      
       .card.card-profile {
-        background-color: #8e4e39;
-        border-radius: 12px;
-        padding: 10px;
-        color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        max-width: 630px;
-        width: 100%; 
-        max-height: 390px;
-        margin: 0 auto;
+        max-width: 100%;
+        padding: 15px;
       }
 
       .container1 {
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        height: auto;
-        margin: 20px 0; 
       }
 
       .card.card-profile .text-content iframe {
-        width: 100%; 
-        height: auto; 
-        aspect-ratio: 16 / 9; 
-        margin: 0 auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: auto;
+      }
+      .shadow-box{
+        display: flex;
+        flex-direction: column;
+      }
+      .shadow-box img{
+        max-width: 100%;
+      }
+      .shadow-box .text-content {
+        width: 100%;
+        font-size: 10px;
+      }
+      .shadow-box .text-content p {
+        font-size: 10px;
+      }
+      .shadow-box .text-content h2 {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
+    .btn {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
       }
 
-      @media (max-width: 768px) {
-        .card.card-profile {
-          max-width: 100%; 
-          padding: 15px; 
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .container1 {
-          flex-direction: column; 
-          align-items: center; 
-        }
-
-        .card.card-profile .text-content iframe {
-          width: 100%; 
-          height: auto; 
-        }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
       }
 
-      .card.card-profile:hover {
-      box-shadow: none; 
-      transform: none; 
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
+    }
+
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .title-visi-misi, .sub-title-visi-misi, .content-section, .title-sub-profile {
+      animation: fadeInText 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInAndFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .title-visi-misi, .sub-title-visi-misi, .content-section, .shadow-box, .card-profile, .item-img-tugas-bagan {
+      opacity: 0;
+    }
   </style>
 </head>
 
@@ -302,7 +388,7 @@
 
   <!-- Main Content -->
   <header>
-      <h1>Profile PPID Kota Surakarta</h1>
+    <h1>Profile PPID Kota Surakarta</h1>
   </header>
 
   <section>
@@ -318,8 +404,7 @@
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -387,11 +472,11 @@
       <div class="row">
         <div class="col-md-6 mb-4">
           <div class="shadow-box">
-          <img src="images/ppid utama.png" alt="Layanan PPID Utama">
+            <img src="images/ppid utama.png" alt="Layanan PPID Utama">
             <div class="text-content">
               <h2 class="fw-bold mb-2 text-white">PPID UTAMA</h2>
               <p class="text-white">
-              Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
+                Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
               </p>
               <ul class="list-unstyled text-white">
                 <li class="mb-2"><i class="bi bi-geo-alt-fill text-white"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
@@ -405,11 +490,11 @@
 
         <div class="col-md-6 mb-4">
           <div class="shadow-box">
-          <img src="images/mall layanan.png" alt="Layanan PPID Utama">
+            <img src="images/mall layanan.png" alt="Layanan PPID Utama">
             <div class="text-content">
               <h2 class="fw-bold mb-2 text-white">MALL PELAYANAN PUBLIK</h2>
               <p class="text-white">
-              Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
+                Pejabat Pengelola Informasi dan Dokumentasi menyediakan informasi publik secara gratis (Tidak dipungut biaya). untuk penggandaan informasi publik dibebankan kepada pemohon informasi
               </p>
               <ul class="list-unstyled text-white">
                 <li class="mb-2 text-white"><i class="bi bi-geo-alt-fill"></i> Jl. Jend. Sudirman No.2, Kota Surakarta</li>
@@ -427,6 +512,40 @@
   <?php include 'includes/footer.html'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2
+    };
+
+    function createScrollAnimations() {
+      const animatedElements = document.querySelectorAll('.title-visi-misi, .sub-title-visi-misi, .content-section, .shadow-box, .card-profile, .item-img-tugas-bagan');
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('shadow-box')) {
+              entry.target.style.animation = 'slideInAndFade 1s ease forwards';
+            } else if (entry.target.classList.contains('title-visi-misi')) {
+              entry.target.style.animation = 'slideInFromLeft 1s ease forwards';
+            } else if (entry.target.classList.contains('item-img-tugas-bagan')) {
+              entry.target.style.animation = 'scaleIn 1s ease forwards';
+            } else {
+              entry.target.style.animation = 'fadeInUp 1s ease forwards';
+            }
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      animatedElements.forEach(element => {
+        scrollObserver.observe(element);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', createScrollAnimations);
+  </script>
 </body>
 
 </html>

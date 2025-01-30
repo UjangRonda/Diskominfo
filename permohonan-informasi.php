@@ -110,10 +110,12 @@
             margin: 20px auto;
             max-width: 1200px;
         }
-        .form-span{
+
+        .form-span {
             display: flex;
             flex-direction: row;
         }
+
         form {
             display: flex;
             flex-direction: column;
@@ -201,12 +203,81 @@
             .image-container img {
                 width: 100%;
             }
-            .radio-container label{
+
+            .radio-container label {
                 font-size: 12px;
             }
-            .radio-container{
+
+            .radio-container {
                 display: inline;
             }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-wrapper {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .form-span input:hover,
+        .form-span textarea:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .image-container:hover {
+            animation: pulse 1s infinite;
+        }
+
+        /* Animasi pada Radio Buttons */
+        .radio-container input[type="radio"]:checked+label {
+            color: var(--primary-color);
+            font-weight: bold;
+            transition: color 0.3s ease, font-weight 0.3s ease;
+        }
+
+        .radio-container label {
+            transition: color 0.3s ease, font-weight 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        header {
+            animation: slideIn 1s ease-out;
         }
     </style>
 </head>
