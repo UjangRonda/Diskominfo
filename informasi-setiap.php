@@ -172,7 +172,7 @@
     <?php include 'includes/navbar.html'; ?>
     <section class="main-content" style="margin-top: 100px;">
         <header>
-            <h1>Katalog Setiap Saat</h1>
+            <h1>Katalog Informasi Setiap Saat</h1>
         </header>
         <div class="catalog-container" id="catalogContainer">
             <!-- Contoh Data Katalog Awal -->
