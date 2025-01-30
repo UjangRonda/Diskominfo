@@ -2,12 +2,13 @@
   /* Gaya Umum untuk Semua Title */
   .section-title {
     text-align: center;
-    font-size: 28px; /* Ukuran font seragam */
+    font-size: 32px; /* Ukuran font lebih besar */
     font-weight: bold;
     color: #8b3e2f; /* Warna sesuai patokan */
     font-family: "Poppins", sans-serif;
-    margin-bottom: 20px; /* Jarak bawah seragam */
+    margin-bottom: 30px; /* Jarak bawah lebih besar */
     position: relative;
+    text-transform: uppercase; /* Judul dalam huruf kapital */
   }
 
   .section-title::after {
@@ -17,6 +18,7 @@
     height: 4px;
     background-color: #8b3e2f; /* Warna garis bawah */
     margin: 15px auto;
+    border-radius: 2px;
   }
 
   /* Gaya Khusus untuk Penghargaan */
@@ -24,6 +26,7 @@
     text-align: center;
     background-color: #f7f7f7;
     color: #333;
+    padding: 40px 0;
   }
 
   .penghargaan .card {
@@ -37,17 +40,26 @@
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .penghargaan .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
 
   .penghargaan .card img {
     height: 160px;
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .penghargaan .card:hover img {
+    transform: scale(1.1);
   }
 
   .penghargaan .card p {
@@ -57,12 +69,14 @@
     line-height: 1.4;
     text-align: center;
     font-family: "Poppins", sans-serif;
+    margin: 0;
   }
 
+  /* Tombol Navigasi Carousel */
   .carousel-control-prev,
   .carousel-control-next {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background-color: #8b3e2f;
     color: #ffffff;
     border-radius: 50%;
@@ -72,13 +86,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
     z-index: 10;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
   }
 
   .carousel-control-prev:hover,
   .carousel-control-next:hover {
     background-color: #b84e3a;
+    opacity: 1;
+  }
+
+  /* Efek Animasi untuk Slide */
+  .carousel-item {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 28px;
+    }
+
+    .penghargaan .card {
+      min-height: 280px;
+    }
+
+    .penghargaan .card img {
+      height: 120px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 24px;
+    }
+
+    .penghargaan .card {
+      min-height: 250px;
+      padding: 15px;
+    }
+
+    .penghargaan .card img {
+      height: 100px;
+    }
+
+    .penghargaan .card p {
+      font-size: 0.8em;
+    }
   }
 </style>
 
