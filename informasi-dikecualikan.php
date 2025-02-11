@@ -164,7 +164,6 @@
             animation: fadeIn 1s ease-out forwards;
         }
     </style>
-    <script src="https://unpkg.com/infinite-scroll@4.0.1/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -174,7 +173,6 @@
             <h1>Katalog Informasi Dikecualikan</h1>
         </header>
         <div class="catalog-container" id="catalogContainer">
-            <!-- Contoh Data Katalog Awal -->
             <div class="catalog-section">
                 <h2 class="section-title">Tata Cara Memperoleh Informasi Publik dan Pengajuan Keberatan</h2>
                 <div class="link-container">
@@ -184,7 +182,6 @@
                     <a href="#" class="catalog-link">Informasi Seputar Manusia Ikan</a>
                 </div>
             </div>
-            <!-- Contoh data lainnya -->
             <div class="catalog-section">
                 <h2 class="section-title">Informasi tentang Regulasi Badan Publik</h2>
                 <div class="link-container">
@@ -229,54 +226,10 @@
                     <a href="#" class="catalog-link">Informasi Seputar Manusia Ikan</a>
                     <a href="#" class="catalog-link">Informasi Seputar Manusia Ikan</a>
                 </div>
-            </div>
-
-            <div class="load-more-container">
-                <button id="loadMoreBtn" class="btn btn-primary">Lihat Selengkapnya</button>
-            </div>
-
-            <div class="loading-status" style="display:none;">
-                <p>Loading...</p>
             </div>
         </div>
     </section>
     <?php include 'includes/footer.html'; ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        var elem = document.querySelector('#catalogContainer');
-        var infScroll = new InfiniteScroll(elem, {
-            path: '/allpages', 
-            append: '.catalog-section',
-            history: false, 
-            status: '.loading-status', 
-            scrollThreshold: 300,
-            bufferPx: 200, 
-        });
-    </script>
-        <script>
-        let currentPage = 1; 
-
-        document.getElementById('loadMoreBtn').addEventListener('click', function() {
-            document.querySelector('.loading-status').style.display = 'block';
-            document.getElementById('loadMoreBtn').style.display = 'none';
-
-            currentPage++;
-
-            fetch(`/page/${currentPage}`)  
-                .then(response => response.text())
-                .then(data => {
-                    //document.getElementById('catalogContainer').insertAdjacentHTML('beforeend', data);
-                    document.querySelector('.loading-status').style.display = 'none';
-                    document.getElementById('loadMoreBtn').style.display = 'none';
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    document.querySelector('.loading-status').style.display = 'none';
-                    document.getElementById('loadMoreBtn').style.display = 'none';
-                });
-        });
-    </script>
 </body>
 
 </html>
