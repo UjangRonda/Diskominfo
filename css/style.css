@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #a55a42;
 }
 

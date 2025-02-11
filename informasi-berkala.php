@@ -229,6 +229,7 @@
             </div>
         </div>
     </section>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <?php include 'includes/footer.html'; ?>
 </body>
 
