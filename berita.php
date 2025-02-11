@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berita PPID Kota Surakarta</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="font/bootstrap-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/keyframe.css" />
   <style>
     body,
     h1,
@@ -26,6 +26,7 @@
     }
 
     header {
+      animation: fadeIn 1s ease-out;
         background: linear-gradient(
             135deg,
             rgba(139, 62, 47, 0.9),
@@ -44,6 +45,7 @@
     }
 
     section {
+      animation: fadeIn 1s ease-out;
       margin: 20px auto;
       padding: 10px;
       width: 80%;
@@ -58,6 +60,7 @@
       flex-direction: column;
       justify-content: space-between;
       margin-top: 70px;
+      transition: ease-in-out 0.2s;
     }
 
     .berita-container .card1:hover {
@@ -638,7 +641,7 @@
     </div>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <?php include 'includes/footer.html'; ?>
 </body>
 
